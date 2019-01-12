@@ -4,15 +4,27 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Đồng Hồ Anh Tuấn
+    title ACE SPORT
     link(rel='stylesheet', href='../css/bootstrap-grid.min.css')
     link(rel='stylesheet', href='../css/bootstrap-reboot.min.css')
     link(rel='stylesheet', href='../css/bootstrap.min.css')
     link(rel='stylesheet', href='../css/mdb.min.css')
+    link(rel='stylesheet', href='../css/font-awesome.min.css')
+    link(rel='stylesheet', href='../css/materialdesignicons.min.css')
+    link(rel='stylesheet', href='../css/sweetalert2.min.css')
     link(rel='stylesheet', href='../css/layout.css')
+    link(rel='shortcut icon', href='../img/favicon.png')
   body
     block article
       .intro-home
+        .intro-home-box
+          a(href='tin-tuc.html', title='Nhấp để vào trang')
+            img(src='../img/t.png')
+            h1 Tin tức
+
+            .intro-home-box-detail
+              h4 Find out about the different work we do with our members on tech support, data strategy
+              p vào xem ngay
         .intro-home-box
           a(href='giai-dau.html', title='Nhấp để vào trang')
             img(src='../img/g.png')
@@ -39,19 +51,7 @@ html(lang="en")
             .intro-home-box-detail
               h4 Find out about the different work we do with our members on tech support, data strategy
               p vào xem ngay
-        
-        .intro-home-box
-          a(href='tin-tuc.html', title='Nhấp để vào trang')
-            img(src='../img/t.png')
-            h1 Tin tức
 
-            .intro-home-box-detail
-              h4 Find out about the different work we do with our members on tech support, data strategy
-              p vào xem ngay
-
-        .intro-home-member
-          a(href='dang-ky.html')
-            | đăng ký thành viên
         .intro-home-logo
           img(src='../img/logo.png')
 
@@ -61,6 +61,9 @@ html(lang="en")
     script(src='../js/jquery.touchSwipe.min.js')
     script(src='../js/jquery.slideandswipe.min.js')
     script(src='../js/bootstrap.min.js')
+    script(src='../js/bootstrap.bundle.min.js')
     script(src='../js/mdb.min.js')
+    script(src='../js/sweetalert2.min.js')
+    script(src='../js/jquery.validate.min.js')
     script(src='../js/layout.js')
 
