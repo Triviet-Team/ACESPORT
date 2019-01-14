@@ -35,6 +35,7 @@ $main_color: #3D35BE;
 
     .logo {
       height: 40px;
+      margin-right: -50px;
     }
 
     .main-menu {
@@ -120,6 +121,58 @@ $main_color: #3D35BE;
     width: 100px;
     text-align: right;
   }
+
+  
+  .page-content .page-tour {
+    grid-template-columns: auto;
+
+    .tour-left-large {
+      width: 100%;
+    }
+
+    .tour-left {
+      &.tour-left-down {
+        left: 0;
+        transform: translateY(60px);  
+        padding: 10px;
+
+        .tour-search {
+          form {
+            display: none;
+          }
+
+          .nav-tabs {
+            margin-top: 0;
+            text-align: center;
+          }
+        }
+      }
+
+      .tour-search {
+        .nav-tabs {
+          li {
+            display: inline-block;
+            width: auto;
+            margin: 0 4px;
+
+            a {
+              padding: 10px;
+              align-content: center;
+              display: grid;
+            }
+          }
+        }
+      }
+    }
+
+    .box-tour {
+      padding: 20px;
+
+      &-info {
+        margin-right: -20px;
+      }
+    }
+  }
 }
 
 
@@ -187,11 +240,90 @@ $main_color: #3D35BE;
   .box-news-img {
     margin-bottom: 15px;
   }
+
+    
+  .page-content .page-tour {
+    grid-template-columns: auto;
+
+    .tour-left {
+      .tour-search {
+        .nav-tabs {
+          li {
+            width: calc(25% - 11px);
+            height: 60px;
+
+            a {
+              font-size: 12px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .box-tour {
+      padding: 0;
+
+      &-content {
+        padding: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+
+      &-author {
+        margin: 0;
+        padding-left: 30px;
+      }
+
+      &-info {
+        margin: -10px 0;
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
   .login .box-login {
     width: 100%;  
+  }
+
+  .page-content .page-tour .box-tour-author {
+    padding-left: 15px;
+    margin-right: -15px;
+  }
+
+  .page-content .tour-left .tour-search form {
+    margin-bottom: 10px;
+  }
+  
+  .navbar.navbar-light {
+    padding: 0;
+    
+    i {
+      position: absolute;
+      right: 30px!important;
+      top: 25px!important;
+      width: 20px;
+    }
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: black;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link {
+    color: white;
+    background: $main_color;
+  }
+
+  .navbar.navbar-light .navbar-toggler {
+    background: #e1e1e1;
+    color: black;
+    width: 100%;
+    height: 50px;
+    position: relative;
   }
 }
 
@@ -199,4 +331,5 @@ $main_color: #3D35BE;
   .box-news {
     padding: 20px;
   }
+
 }

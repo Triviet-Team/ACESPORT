@@ -1,7 +1,3 @@
-
-
-
-
 $('document').ready(function() {
   // ACTIVE MENU
   let url = window.location.href;
@@ -16,7 +12,6 @@ $('document').ready(function() {
   $('.menu .nav').slideAndSwipe();
 
   let ww = document.body.clientWidth;
-
 
   // GO TOP
   $(window).scroll( function() {
@@ -34,6 +29,7 @@ $('document').ready(function() {
     }, 600);
     return false;
   });
+  // end
 
   //NAVTABS ACTIVE
   $('.navbar-nav .nav-item').on('click', function(){
@@ -49,8 +45,10 @@ $('document').ready(function() {
     let text = $(this).text();
     $(itemParent).text(text);
     $('.navbar-collapse').removeClass('show');
-  })
+  });
+  // end
 
+  // Setting menu mobile
   $('.nav-close').click(() => {
     $('.menu .nav')
       .css('transform', ' translate(-300px, 0px)')
@@ -59,6 +57,7 @@ $('document').ready(function() {
     $('.ssm-overlay').css('display', 'none');
     $('html').removeClass('is-navOpen');
   });
+  // end
 
   //INDEX SETTING
   for(let i = 0; i < 4; i++) {
@@ -69,10 +68,9 @@ $('document').ready(function() {
   }
 
   if (ww < 575) {
-    let attr = $('.intro-home-box a').attr('href');
-    $('.intro-home-box-detail p').attr('href', attr);
-    $('.intro-home-box a').removeAttr('href');
+    $('.link-intro').removeAttr('href');
   }
+  // end
 
   // Khi chưa đăng nhập
   $('.login-btn').click(function() {
@@ -84,7 +82,7 @@ $('document').ready(function() {
     $('.box-login').removeClass('box-login-show');
     $('.login-btn span i').remove('mdi-chevron-up')
   });
-  
+  // end
 
   // Khi đã đăng nhập
   $('.login-complete-btn').click(function() {
@@ -96,7 +94,9 @@ $('document').ready(function() {
     $('.login-complete').removeClass('box-login-show');
     $('.login-complete-btn span i').remove('mdi-chevron-up')
   });
+  // end
 
+  // Setting login form
   $('.link-signup').click(function() {
     $('#signin-tab').removeClass('active');
     $('#signup-tab').addClass('active');
@@ -110,15 +110,29 @@ $('document').ready(function() {
     $('#signup').removeClass('show active');
     $('#signin').addClass('show active');
   });
+  // end
+
+  // setting navtabs TOUR page
+  $(window).scroll( function() {
+    if ($(this).scrollTop() > 400) {
+      $('.tour-left').addClass('tour-left-down')
+
+    } else {
+      $('.tour-left').removeClass('tour-left-down')
+    }
+  });
   
+  $('.tour-search .nav-tabs li, .tour-search .navbar li').click(() => {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+  });
+  // end
 });
 
 
 
-
-
-
-
+// validate login
 $(document).ready(function(){
   jQuery.validator.addMethod("noSpace", function(value, element) { 
     return value.indexOf(" ") < 0 && value != ""; 
@@ -169,3 +183,86 @@ $("#signup-form").validate({
     error.insertAfter(element);
   }
 });
+// end
+$(document).ready( function () {
+  $('#score-board').DataTable({
+    "processing": true,
+    "responsive": true,
+    "ajax": {
+      "url": "http://5bb8ef65b6ed2c0014d47508.mockapi.io/Ok/tennis",
+      "dataSrc": ""
+    },
+    "columns": [
+      { 
+        "data": "rank",
+        "render": function(data, type, row) {
+          return (
+            `${row.rank}`
+          );
+        },
+      },
+      { 
+        "data": "name",
+        "render": function(data, type, row) {
+          return (
+            `<a href="chi-tiet-thanh-vien.html"><img src=${row.avatar}/> ${row.name}</a>`
+          );
+        },
+      },
+      { 
+        "data": "score",
+        "render": function(data, type, row) {
+          return (
+            `${row.score}`
+          );
+        },
+      },
+      { 
+        "data": "money",
+        "render": function(data, type, row) {
+          return (
+            `${row.money}`
+          );
+        },
+      },
+      { 
+        "data": "winLost",
+        "render": function(data, type, row) {
+          return (
+            `${row.win} / ${row.lose}`
+          );
+        },
+      },
+      { 
+        "data": "count",
+        "render": function(data, type, row) {
+          return (
+            `${row.count}`
+          );
+        },
+      },
+
+    ],
+    "language": {
+      "processing": "Đang tải",
+      "lengthMenu": "Hiển thị _MENU_ mục",
+      "emptyTable":     "Không có dữ liệu nào trong bảng",
+      "loadingRecords": "Đang tải...",
+      "zeroRecords": "Không có mục nào được tìm thấy",
+      "info": "Hiển thị _START_ đến _END_ trong _TOTAL_ mục",
+      "infoEmpty": "Không có mục nào có sẵn",
+      "infoFiltered": "(Lọc từ _MAX_ mục)",
+      "search": "Tìm kiếm:",
+      "paginate": {
+          "first":      "Đầu",
+          "last":       "Cuối",
+          "next":       "Sau",
+          "previous":   "Trước"
+      },
+    },
+    "order": [[ 0, "asc" ]],
+    "pagingType": "full_numbers"
+  });
+});
+
+

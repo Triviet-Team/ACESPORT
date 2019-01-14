@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>ACE SPORT</title>
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/mdb.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/materialdesignicons.min.css"/>
+    <link rel="stylesheet" href="../css/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="../css/layout.css"/>
+    <link rel="shortcut icon" href="../img/favicon.png"/>
+  </head>
+  <body>
+    <div class="go-top wow zoomInRight" title="Lên đầu trang" data-wow-duration="2s"><span></span><span></span></div>
+    <header>
+      <section class="menu wow animated">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-4">
+              <div class="logo"><a href="index.html"><img src="../img/logo.png"/></a></div>
+            </div>
+            <div class="col-lg-8 col-12 order-last order-lg-0">
+              <div class="main-menu"><a class="toggleMenu ssm-toggle-nav"><i class="mdi mdi-menu"></i></a>
+                <ul class="nav">
+                  <div class="nav-close"><i class="mdi mdi-close d-block d-sm-none"></i></div>
+                  <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+                  <li class="nav-item"><a href="tin-tuc.html">tin tức</a></li>
+                  <li class="nav-item"><a href="giai-dau.html">giải đấu</a></li>
+                  <li class="nav-item"><a href="bang-diem.html">bảng điểm</a></li>
+                  <li class="nav-item"><a href="thanh-vien.html">thành viên</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-8">
+              <div class="text-right">
+                <div class="login-btn"><i class="mdi mdi-account-circle"></i><span>Tài khoản </span><i class="mdi mdi-chevron-down"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <div class="box-login">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">
+                     Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">
+                     Đăng ký</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab"> 
+                  <form id="signin-form">
+                    <div class="md-form mt-5"><i class="mdi mdi-email prefix grey-text"></i>
+                      <input class="form-control validate" id="nick-signin" type="text"/>
+                      <label for="nick-signin">Email hoặc tên đăng nhập</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock prefix grey-text"></i>
+                      <input class="form-control validate" id="password-signin" type="text"/>
+                      <label for="password-signin">Mật khẩu</label>
+                    </div>
+                    <div class="login-submit text-center mb-4 pb-5 border-bottom border-light">
+                      <button class="btn btn-indigo">Đăng nhập</button>
+                    </div>
+                    <div class="login-footer">
+                      <div class="row">
+                        <div class="col-sm-9">
+                          <h5 class="mb-2"><span>Bạn không phải là thành viên ?</span><a class="link-signup">Đăng ký ngay </a></h5>
+                          <h5 class="mb-3"><a>Quên mật khẩu?</a></h5>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                          <button class="mt-2 login-close btn btn-light text-right" type="button">Đóng</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab"> 
+                  <form id="signup-form" novalidate="novalidate">
+                    <div class="md-form mt-5"><i class="mdi mdi-account-box prefix grey-text"></i>
+                      <input class="form-control validation" id="name_signup" type="text" name="name_signup"/>
+                      <label for="nick_signup">Họ tên của bạn</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-email prefix grey-text"></i>
+                      <input class="form-control validation" id="email_signup" type="email" name="email_signup"/>
+                      <label for="email_signup">
+                         Email</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-account-key prefix grey-text"></i>
+                      <input class="form-control validation" id="nick_signup" type="text" name="nick_signup"/>
+                      <label for="nick_signup">
+                         Tên đăng nhập</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock prefix grey-text"></i>
+                      <input class="form-control validation" id="password_signup" type="password" name="password_signup"/>
+                      <label for="password_signup">
+                         Mật khẩu</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock-plus prefix grey-text"></i>
+                      <input class="form-control validation" id="passwordEq_signup" type="password" name="passwordEq_signup"/>
+                      <label for="passwordEq_signup">
+                         Nhập lại mật khẩu</label>
+                    </div>
+                    <div class="login-submit text-center mb-4 pb-5 border-bottom border-light">
+                      <button class="btn btn-indigo" type="submit">Đăng ký</button>
+                    </div>
+                    <div class="login-footer">
+                      <div class="row">
+                        <div class="col-sm-9">
+                          <h5><span>Bạn đã là thành viên? </span><a class="link-signin">Đăng nhập ngay</a></h5>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                          <button class="mt-2 login-close btn btn-light text-right" type="button">Đóng</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-complete">
+            <ul>
+              <li><a href="thong-tin-ca-nhan.html"><i class="mdi mdi-account-edit"></i>thông tin cá nhân</a></li>
+              <li><a href="thong-ke-giai-dau.html"><i class="mdi mdi-chart-areaspline"></i>thống kê giải đấu</a></li>
+              <li><a href="dang-xuat.html"><i class="mdi mdi-logout"></i>đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="ssm-overlay ssm-toggle-nav"></div>
+    </header>
+    <article>
+      <section class="bread-crumb">
+        <div class="container">
+          <div class="bc-icons">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Giải dấu</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="page-content">
+        <div class="container">
+          <div class="title-page text-center">
+            <h1> <a>giải đấu</a></h1>
+          </div>
+          <div class="page-tour">
+            <div class="tour-left-large">
+              <div class="tour-left">
+                <div class="tour-search">      
+                  <form><a><i class="mdi mdi-magnify"></i></a>
+                    <input class="form-control" type="text" placeholder="Nhập từ khóa"/>
+                  </form>
+                  <ul class="nav nav-tabs d-none d-sm-block" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" id="tour-1-tab" data-toggle="tab" href="#tour-1" role="tab" aria-controls="tour-1" aria-selected="true">
+                         Giải đấu mới</a></li>
+                    <li class="nav-item"><a class="nav-link" id="tour-2-tab" data-toggle="tab" href="#tour-2" role="tab" aria-controls="tour-2" aria-selected="true">
+                         Giải đấu đã diễn ra</a></li>
+                    <li class="nav-item"><a class="nav-link" id="tour-3-tab" data-toggle="tab" href="#tour-3" role="tab" aria-controls="tour-3" aria-selected="true">
+                         Giải đấu đã kết thúc</a></li>
+                    <li class="nav-item"><a class="nav-link" id="tour-4-tab" data-toggle="tab" href="#tour-4" role="tab" aria-controls="tour-4" aria-selected="true">
+                         Thư viện ảnh</a></li>
+                  </ul>
+                  <nav class="navbar navbar-light d-block d-sm-none">
+                    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#hotProduct" aria-controls="hotProduct" aria-expanded="false" aria-label="Toggle navigation"><a class="navbar-brand">Giải đấu mới</a></button><i class="mdi mdi-chevron-down"></i>
+                    <div class="collapse navbar-collapse" id="hotProduct">
+                      <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link active" id="tour-1-tab" data-toggle="tab" href="#tour-1" role="tab" aria-controls="tour-1" aria-selected="true">
+                             Giải đấu mới</a></li>
+                        <li class="nav-item"><a class="nav-link" id="tour-2-tab" data-toggle="tab" href="#tour-2" role="tab" aria-controls="tour-2" aria-selected="true">
+                             Giải đấu đã diễn ra</a></li>
+                        <li class="nav-item"><a class="nav-link" id="tour-3-tab" data-toggle="tab" href="#tour-3" role="tab" aria-controls="tour-3" aria-selected="true">
+                             Giải đấu đã kết thúc</a></li>
+                        <li class="nav-item"><a class="nav-link" id="tour-4-tab" data-toggle="tab" href="#tour-4" role="tab" aria-controls="tour-4" aria-selected="true">
+                             Thư viện ảnh</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="tour-main">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tour-1" role="tabpanel" aria-labelledby="tour-1-tab">     
+                  <h2>giải đấu mới</h2>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">10 Kids Unaware of Their Halloween Costume</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tour-2" role="tabpanel" aria-labelledby="tour-2-tab">     
+                  <h2>giải đấu đã diễn ra</h2>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar2.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar2.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar2.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar2.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tour">
+                    <div class="row">
+                      <div class="col-md-8 col-12">
+                        <div class="box-tour-content">
+                          <h4> <a href="chi-tiet-giai-dau.html">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?</a></h4>
+                          <h5> It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-1 col-3 order-md-first order-0">
+                        <div class="box-tour-author"><img src="../img/avatar.jpeg"/>
+                          <h6>Admin</h6>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-9">
+                        <div class="box-tour-info text-center">
+                          <div class="box-tour-info-comment">
+                            <h5>100</h5>
+                          </div>
+                          <div class="box-tour-info-view"><i class="mdi mdi-eye"></i>101</div>
+                          <div class="box-tour-info-date"><i class="mdi mdi-calendar-clock"></i>14/01/2019 - 17:30</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-center text-lg-left mb-lg-0 mb-md-2 mb-sm-2 mb-0">
+              <h5>Copyright @ 2018 ACESPORT. All Reserved. Designed by Tri Viet</h5>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right d-none d-sm-block">
+              <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="tin-tuc.html">Tin tức</a></li>
+                <li><a href="giai-dau.html">Giải đấu</a></li>
+                <li><a href="bang-diem.html">Bảng điểm</a></li>
+                <li><a href="thanh-vien.html">Thành viên</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/jquery.slideandswipe.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/layout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+extends inc
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item.active Bảng điểm
+    
+    section.page-content.score-board
+      .container
+        .title-page.text-center
+          h1 
+            a Bảng điểm
+
+        .table-responsive
+          table.table.table-bordered.table-hover.display#score-board(style='width: 100%')
+            thead
+              tr
+                th(scope='col') Hạng
+                th(scope='col') Tên thành viên
+                th(scope='col') Tổng điểm
+                th(scope='col') Tổng tiền thưởng
+                th(scope='col') Số trận thắng / thua
+                th(scope='col') Số giải đấu
+            
