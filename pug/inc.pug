@@ -5,16 +5,17 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title ACE SPORT
-    link(rel='stylesheet', href='../css/bootstrap-grid.min.css')
-    link(rel='stylesheet', href='../css/bootstrap-reboot.min.css')
-    link(rel='stylesheet', href='../css/bootstrap.min.css')
-    link(rel='stylesheet', href='../css/mdb.min.css')
-    link(rel='stylesheet', href='../css/font-awesome.min.css')
-    link(rel='stylesheet', href='../css/materialdesignicons.min.css')
-    link(rel='stylesheet', href='../css/sweetalert2.min.css')
-    link(rel="stylesheet", href='../css/dataTables.bootstrap4.min.css')
-    link(rel='stylesheet', href='../css/layout.css')
-    link(rel='shortcut icon', href='../img/favicon.png')
+    block style
+      link(rel='stylesheet', href='../css/bootstrap-grid.min.css')
+      link(rel='stylesheet', href='../css/bootstrap-reboot.min.css')
+      link(rel='stylesheet', href='../css/bootstrap.min.css')
+      link(rel='stylesheet', href='../css/mdb.min.css')
+      link(rel='stylesheet', href='../css/font-awesome.min.css')
+      link(rel='stylesheet', href='../css/materialdesignicons.min.css')
+      link(rel='stylesheet', href='../css/sweetalert2.min.css')
+      link(rel="stylesheet", href='../css/dataTables.bootstrap4.min.css')
+      link(rel='stylesheet', href='../css/layout.css')
+      link(rel='shortcut icon', href='../img/favicon.png')
   body
     .go-top.wow.zoomInRight(title='Lên đầu trang', data-wow-duration='2s')
       span
@@ -172,9 +173,8 @@ html(lang="en")
 
                 
 
-
-
         .ssm-overlay.ssm-toggle-nav
+        .overlay
 
     block article
 
@@ -200,15 +200,15 @@ html(lang="en")
                     a(href='thanh-vien.html') Thành viên
                   
 
-        
-      script(src='../js/jquery-3.3.1.min.js')
-      script(src='../js/jquery.touchSwipe.min.js')
-      script(src='../js/jquery.slideandswipe.min.js')
-      script(src='../js/bootstrap.min.js')
-      script(src='../js/bootstrap.bundle.min.js')
-      script(src='../js/mdb.min.js')
-      script(src='../js/sweetalert2.min.js')
-      script(src='../js/jquery.validate.min.js')
-      script(src='../js/jquery.dataTables.min.js')
-      script(src='../js/dataTables.bootstrap4.min.js')
-      script(src='../js/layout.js')
+    script(src='../js/jquery-3.3.1.min.js')
+    block script 
+    script(src='../js/jquery.touchSwipe.min.js')
+    script(src='../js/jquery.slideandswipe.min.js')
+    script(src='../js/bootstrap.min.js')
+    script(src='../js/bootstrap.bundle.min.js')
+    script(src='../js/mdb.min.js')
+    script(src='../js/sweetalert2.min.js')
+    script(src='../js/jquery.validate.min.js')
+    script(src='../js/jquery.dataTables.min.js')
+    script(src='../js/dataTables.bootstrap4.min.js')
+    script(src='../js/layout.js')

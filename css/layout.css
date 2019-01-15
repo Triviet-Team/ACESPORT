@@ -159,6 +159,21 @@ article {
   display: none;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+}
+.overlay.overlay-in {
+  display: block;
+  cursor: url("../img/cursor.png"), auto;
+}
+
 .intro-home {
   background-image: url("../img/home-2.jpeg");
   background-size: cover;
@@ -459,10 +474,10 @@ article {
   color: #858585;
 }
 .login .box-login .login-footer a {
-  color: #858585;
+  color: #3D35BE;
 }
 .login .box-login .login-footer a:hover {
-  color: #3D35BE;
+  color: black;
 }
 .login .box-login .login-footer .login-close {
   background: #e1e1e1;
@@ -831,6 +846,13 @@ article {
 .score-board table.table-bordered.dataTable tbody tr td {
   font-weight: 500;
 }
+.score-board table.table-bordered.dataTable tbody tr td a {
+  transition: none;
+}
+.score-board table.table-bordered.dataTable tbody tr td a:hover {
+  color: #3D35BE;
+  transition: 0;
+}
 .score-board table.table-bordered.dataTable tbody tr:hover {
   background: #f4f4f4;
 }
@@ -842,19 +864,238 @@ article {
   text-transform: uppercase;
 }
 .score-board .pagination .page-item .page-link {
-  background: white;
-  border: 1px solid #e1e1e1;
+  background: #e1e1e1;
+  border: 1px solid #ccc;
 }
 .score-board .pagination .page-item .page-link:hover {
   background: #3D35BE;
   color: white;
+  border-color: #3D35BE;
 }
 .score-board .pagination .page-item.active .page-link {
   background: #3D35BE;
   box-shadow: none;
+  border-color: #3D35BE;
 }
 .score-board .page-link:focus {
   box-shadow: none;
+}
+.score-board div.dataTables_wrapper div.dataTables_filter input {
+  background: #e1e1e1;
+}
+
+.page-text .title-page-text h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.page-text .box-post {
+  background: white;
+  padding: 0 30px;
+  box-shadow: 0px 2px 1px #e1e1e1;
+  margin-bottom: 30px;
+}
+.page-text .box-post-author {
+  padding: 30px;
+}
+.page-text .box-post-author img {
+  border-radius: 50%;
+}
+.page-text .box-post-author h5 {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #e1e1e1;
+  color: #3D35BE;
+  font-weight: 600;
+}
+.page-text .box-post-detail {
+  border-left: 1px solid #e1e1e1;
+  margin-right: -30px;
+}
+.page-text .box-post-detail-date {
+  padding: 10px 30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.page-text .box-post-detail-content {
+  padding: 30px;
+}
+.page-text .box-post-detail-content p {
+  color: #797979;
+}
+.page-text .box-post-detail-tags {
+  padding: 10px 30px;
+  border-top: 1px solid #e1e1e1;
+}
+.page-text .box-post-detail-tags span {
+  color: #3D35BE;
+}
+.page-text .box-post-detail-tags span:hover {
+  color: black;
+}
+.page-text .comment-first {
+  background: white;
+  padding: 0 30px;
+  box-shadow: 0px 2px 1px #e1e1e1;
+  margin-bottom: 30px;
+}
+.page-text .comment-first-img img {
+  border-radius: 50%;
+  padding: 15px 0;
+  width: 40px;
+  text-align: center;
+}
+.page-text .comment-first-box {
+  border-left: 1px solid #e1e1e1;
+  padding: 15px 30px;
+  padding-right: 0;
+}
+.page-text .comment-first-box input {
+  height: 40px;
+  border-radius: 40px;
+  background: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  padding-left: 20px;
+}
+.page-text .comment-first-box input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(61, 53, 190, 0.25);
+}
+.page-text .box-comment {
+  background: white;
+  padding: 0 30px;
+  box-shadow: 0px 2px 1px #e1e1e1;
+  margin-bottom: 30px;
+}
+.page-text .box-comment-author {
+  padding: 30px;
+}
+.page-text .box-comment-author img {
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.page-text .box-comment-author img:hover {
+  filter: brightness(80%);
+}
+.page-text .box-comment-author h5 {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #e1e1e1;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.page-text .box-comment-author h5 a {
+  color: #3D35BE;
+  transition: 0.5s;
+}
+.page-text .box-comment-author h5 a:hover {
+  color: black;
+}
+.page-text .box-comment-author p {
+  margin-bottom: 5px;
+}
+.page-text .box-comment-detail {
+  border-left: 1px solid #e1e1e1;
+  margin-right: -30px;
+}
+.page-text .box-comment-detail-date {
+  padding: 10px 30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.page-text .box-comment-detail-date h5, .page-text .box-comment-detail-date button {
+  display: inline-block;
+}
+.page-text .box-comment-detail-date button {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.page-text .box-comment-detail-content {
+  padding: 30px;
+}
+.page-text .box-comment-detail-content p {
+  color: #797979;
+}
+.page-text .box-comment-detail-content .comment-reply {
+  margin-top: 20px;
+}
+.page-text .box-comment-detail-content .comment-reply button {
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+.page-text .box-comment-detail-content .comment-reply .comment-reply-form {
+  margin-top: 10px;
+  display: none;
+}
+.page-text .box-comment-detail-content .comment-reply .comment-reply-form img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.page-text .box-comment-detail-content .comment-reply .comment-reply-form input {
+  height: 30px;
+  border-radius: 30px;
+  background: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  padding-left: 20px;
+}
+.page-text .box-comment-detail-content .comment-reply .comment-reply-form input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(61, 53, 190, 0.25);
+}
+.page-text .sub-comment {
+  margin-top: 40px;
+}
+.page-text .sub-comment .box-sub-comment {
+  background: #f4f4f4;
+  box-shadow: 0px 2px 1px #e1e1e1;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+.page-text .sub-comment .box-sub-comment-img {
+  display: flex;
+  margin-top: 10px;
+}
+.page-text .sub-comment .box-sub-comment-img img {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+.page-text .sub-comment .box-sub-comment-img h5 a {
+  font-weight: 600;
+  color: #3D35BE;
+}
+.page-text .sub-comment .box-sub-comment-img h5 a:hover {
+  color: black;
+}
+.page-text .sub-comment .box-sub-comment-content {
+  border-left: 1px solid #e1e1e1;
+  padding: 10px;
+  padding-left: 20px;
+  height: 100%;
+}
+.page-text .sub-comment .box-sub-comment-content p {
+  margin: 0;
+}
+.page-text .sub-comment .box-sub-comment-content button {
+  background: #cccccc;
+  padding: 2px 5px;
+  margin-top: 5px;
+  border: 0;
+  box-shadow: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12px;
+  transition: 0.2s;
+}
+.page-text .sub-comment .box-sub-comment-content button:hover {
+  background: #3D35BE;
+  color: white;
+}
+.page-text .sub-comment .box-sub-comment-date {
+  padding: 10px 0;
+  border-left: 1px solid #e1e1e1;
+  height: 100%;
+}
+.page-text .sub-comment .box-sub-comment-date h5 {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 1200px) {
