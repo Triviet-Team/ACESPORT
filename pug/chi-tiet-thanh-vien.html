@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>ACE SPORT</title>
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/mdb.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/materialdesignicons.min.css"/>
+    <link rel="stylesheet" href="../css/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="../css/layout.css"/>
+    <link rel="shortcut icon" href="../img/favicon.png"/>
+  </head>
+  <body>
+    <div class="go-top wow zoomInRight" title="Lên đầu trang" data-wow-duration="2s"><span></span><span></span></div>
+    <header>
+      <section class="menu wow animated">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-4">
+              <div class="logo"><a href="index.html"><img src="../img/logo.png"/></a></div>
+            </div>
+            <div class="col-lg-8 col-12 order-last order-lg-0">
+              <div class="main-menu"><a class="toggleMenu ssm-toggle-nav"><i class="mdi mdi-menu"></i></a>
+                <ul class="nav">
+                  <div class="nav-close"><i class="mdi mdi-close d-block d-sm-none"></i></div>
+                  <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+                  <li class="nav-item"><a href="tin-tuc.html">tin tức</a></li>
+                  <li class="nav-item"><a href="giai-dau.html">giải đấu</a></li>
+                  <li class="nav-item"><a href="bang-diem.html">bảng điểm</a></li>
+                  <li class="nav-item"><a href="thanh-vien.html">thành viên</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-8">
+              <div class="text-right">
+                <div class="login-btn"><i class="mdi mdi-account-circle"></i><span>Tài khoản </span><i class="mdi mdi-chevron-down"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <div class="box-login">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">
+                     Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">
+                     Đăng ký</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab"> 
+                  <form id="signin-form">
+                    <div class="md-form mt-5"><i class="mdi mdi-email prefix grey-text"></i>
+                      <input class="form-control validate" id="nick-signin" type="text"/>
+                      <label for="nick-signin">Email hoặc tên đăng nhập</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock prefix grey-text"></i>
+                      <input class="form-control validate" id="password-signin" type="text"/>
+                      <label for="password-signin">Mật khẩu</label>
+                    </div>
+                    <div class="login-submit text-center mb-4 pb-5 border-bottom border-light">
+                      <button class="btn btn-indigo">Đăng nhập</button>
+                    </div>
+                    <div class="login-footer">
+                      <div class="row">
+                        <div class="col-sm-9">
+                          <h5 class="mb-2"><span>Bạn không phải là thành viên ?</span><a class="link-signup">Đăng ký ngay </a></h5>
+                          <h5 class="mb-3"><a>Quên mật khẩu?</a></h5>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                          <button class="mt-2 login-close btn btn-light text-right" type="button">Đóng</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab"> 
+                  <form id="signup-form" novalidate="novalidate">
+                    <div class="md-form mt-5"><i class="mdi mdi-account-box prefix grey-text"></i>
+                      <input class="form-control validation" id="name_signup" type="text" name="name_signup"/>
+                      <label for="nick_signup">Họ tên của bạn</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-email prefix grey-text"></i>
+                      <input class="form-control validation" id="email_signup" type="email" name="email_signup"/>
+                      <label for="email_signup">
+                         Email</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-account-key prefix grey-text"></i>
+                      <input class="form-control validation" id="nick_signup" type="text" name="nick_signup"/>
+                      <label for="nick_signup">
+                         Tên đăng nhập</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock prefix grey-text"></i>
+                      <input class="form-control validation" id="password_signup" type="password" name="password_signup"/>
+                      <label for="password_signup">
+                         Mật khẩu</label>
+                    </div>
+                    <div class="md-form mt-5"><i class="mdi mdi-lock-plus prefix grey-text"></i>
+                      <input class="form-control validation" id="passwordEq_signup" type="password" name="passwordEq_signup"/>
+                      <label for="passwordEq_signup">
+                         Nhập lại mật khẩu</label>
+                    </div>
+                    <div class="login-submit text-center mb-4 pb-5 border-bottom border-light">
+                      <button class="btn btn-indigo" type="submit">Đăng ký</button>
+                    </div>
+                    <div class="login-footer">
+                      <div class="row">
+                        <div class="col-sm-9">
+                          <h5><span>Bạn đã là thành viên? </span><a class="link-signin">Đăng nhập ngay</a></h5>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                          <button class="mt-2 login-close btn btn-light text-right" type="button">Đóng</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-complete">
+            <ul>
+              <li><a href="thong-tin-ca-nhan.html"><i class="mdi mdi-account-edit"></i>thông tin cá nhân</a></li>
+              <li><a href="thong-ke-giai-dau.html"><i class="mdi mdi-chart-areaspline"></i>thống kê giải đấu</a></li>
+              <li><a href="dang-xuat.html"><i class="mdi mdi-logout"></i>đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="ssm-overlay ssm-toggle-nav"></div>
+      <div class="overlay"></div>
+    </header>
+    <article>
+      <section class="bread-crumb">
+        <div class="container">
+          <div class="bc-icons">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="bang-diem.html">Bảng điểm</a></li>
+                <li class="breadcrumb-item active">Địch Lệ Nhiệt Ba</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="member-page">
+        <div class="container">
+          <div class="box-member-title">
+            <h3>Thông tin cá nhân</h3>
+          </div>
+          <div class="box-member">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box-member-img"><a class="fancybox" title="Nhấp để phóng to hình" data-fancybox="gallery" href="../img/ava.jpg"><img src="../img/ava.jpg" alt=""/></a>
+                  <p class="title-member">Thông tin liên lạc:</p>
+                  <h5> <i class="mdi mdi-map-marker-radius"></i>Số 1 Phường 2, Quận 3, Tân Cương</h5>
+                  <h5><i class="mdi mdi-email-variant"></i>dichlenhietba@gmail.com</h5>
+                  <h5><i class="mdi mdi-phone-classic"></i>0912345678</h5>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="box-member-detail">
+                  <h3>Địch Lệ Nhiệt Ba</h3>
+                  <p>Dilireba</p>
+                  <ul>
+                    <li>
+                      <label>Giới tính:</label>Nữ
+                    </li>
+                    <li>
+                      <label>Đơn vị công tác:</label>Diễn viên điện ảnh
+                    </li>
+                    <li>
+                      <label>Năm sinh:</label>1992
+                    </li>
+                  </ul>
+                  <h5 class="title-member">Giới thiệu bản thân:</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-member-title">
+            <h3>Thống kê chung</h3>
+          </div>
+          <div class="box-member chart">
+            <div class="row">
+              <div class="col-sm-6 box-member-detail">
+                <ul>
+                  <li>
+                    <label>Xếp hạng:</label>100
+                  </li>
+                  <li>
+                    <label>Số trận thắng:</label>1
+                  </li>
+                  <li>
+                    <label>Số trận thua:</label>199
+                  </li>
+                  <li>
+                    <label>Tổng điểm:</label>666
+                  </li>
+                  <li>
+                    <label>Tổng tiển thưởng:</label>99.000.000 đ
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6 box-member-detail">
+                <ul>
+                  <li>
+                    <label>Số lần tham dự:</label>100
+                  </li>
+                  <li>
+                    <label>Số lần hạng 1:</label>1
+                  </li>
+                  <li>
+                    <label>Số lần hạng 2:</label>199
+                  </li>
+                  <li>
+                    <label>Số lần hạng 3:</label>666
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box-member-title">
+            <h3>Lịch sử trận đấu</h3>
+          </div>
+          <div class="box-member-tabs">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item"><a class="nav-link active" id="tableSingle-tab" data-toggle="tab" href="#tableSingle" role="tab" aria-controls="tableSingle" aria-selected="true">
+                   Đơn</a></li>
+              <li class="nav-item"><a class="nav-link" id="tableCouple-tab" data-toggle="tab" href="#tableCouple" role="tab" aria-controls="tableCouple" aria-selected="false">
+                   Đôi</a></li>
+              <li class="nav-item"><a class="nav-link" id="tableCoupleGender-tab" data-toggle="tab" href="#tableCoupleGender" role="tab" aria-controls="tableCoupleGender" aria-selected="false">
+                   Đôi nam </a></li>
+            </ul>
+          </div>
+          <div class="box-member-tabs-content">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tableSingle" role="tabpanel" aria-labelledby="tableSingle-tab"> 
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover display history-table" id="historySingle" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th scope="col">Dạng</th>
+                        <th scope="col">Tên Giải đấu</th>
+                        <th scope="col">Ngày bắt đầu</th>
+                        <th scope="col">Thứ hạng</th>
+                        <th scope="col">Tổng tỉ số</th>
+                        <th scope="col">Điểm</th>
+                        <th scope="col">Tiền thưởng</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tableCouple" role="tabpanel" aria-labelledby="tableCole-tabup"> 
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover display history-table" id="historyCouple" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th scope="col">Dạng</th>
+                        <th scope="col">Tên Giải đấu</th>
+                        <th scope="col">Ngày bắt đầu</th>
+                        <th scope="col">Thứ hạng</th>
+                        <th scope="col">Tổng tỉ số</th>
+                        <th scope="col">Điểm</th>
+                        <th scope="col">Tiền thưởng</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-center text-lg-left mb-lg-0 mb-md-2 mb-sm-2 mb-0">
+              <h5>Copyright @ 2018 ACESPORT. All Reserved. Designed by Tri Viet</h5>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right d-none d-sm-block">
+              <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="tin-tuc.html">Tin tức</a></li>
+                <li><a href="giai-dau.html">Giải đấu</a></li>
+                <li><a href="bang-diem.html">Bảng điểm</a></li>
+                <li><a href="thanh-vien.html">Thành viên</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/jquery.touchSwipe.min.js"></script>
+    <script src="../js/jquery.slideandswipe.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/layout.js"></script>
+  </body>
+</html>

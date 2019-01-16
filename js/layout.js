@@ -237,7 +237,7 @@ $('document').ready(function() {
 
     Swal({
       title: 'Bạn chắc chắn chứ?',
-      text: "Xóa vĩnh viễn sẽ không phục hồi lại được!",
+      text: "Xóa sẽ không phục hồi lại được!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -248,7 +248,7 @@ $('document').ready(function() {
       if (result.value) {
         Swal(
           'Xóa thành công!',
-          'Bạn đã xóa danh mục thành công.',
+          'Bạn đã xóa bình luận thành công.',
           'success'
         ).then(function(res) {
           if (res) {

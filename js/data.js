@@ -172,3 +172,109 @@ $(document).ready( function () {
   });
 });
 //end
+
+$(document).ready(function() {
+  $('a[data-toggle="tab"]').on( 'shown.bs.tab', function (e) {
+      $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
+  } );
+   
+  $('.history-table').DataTable( {
+    "processing": true,
+    "responsive": true,
+    "deferRender": true,
+    "ajax": {
+      "url": "http://5bb8ef65b6ed2c0014d47508.mockapi.io/Ok/history",
+      "dataSrc": ""
+    },
+    scrollY:        500,
+    scrollCollapse: true,
+    paging:         false,
+    "columns": [
+      { 
+        "data": "historyType",
+        "visible": false,
+        "render": function(data, type, row) {
+          return (
+            `${row.historyType}`
+          );
+        },
+      },
+      { 
+        "data": "name",
+        "render": function(data, type, row) {
+          return (
+            `${row.name}`
+          );
+        },
+      },
+      { 
+        "data": "date",
+        "render": function(data, type, row) {
+          return (
+            `${row.date}`
+          );
+        },
+      },
+      { 
+        "data": "rank",
+        "render": function(data, type, row) {
+          return (
+            `${row.rank}`
+          );
+        },
+      },
+      { 
+        "data": "score",
+        "render": function(data, type, row) {
+          return (
+            `${row.scoreWin} : ${row.scoreLose}`
+          );
+        },
+      },
+      { 
+        "data": "money",
+        "render": function(data, type, row) {
+          return (
+            `${row.money}`
+          );
+        },
+      },
+      { 
+        "data": "point",
+        "render": function(data, type, row) {
+          return (
+            `${row.point}`
+          );
+        },
+      },
+
+    ],
+    "language": {
+      "processing": "Đang tải",
+      "lengthMenu": "Hiển thị _MENU_ thành viên",
+      "emptyTable":     "Không có dữ liệu nào trong bảng",
+      "loadingRecords": "Đang tải...",
+      "zeroRecords": "Không có thành viên nào được tìm thấy",
+      "info": "Hiển thị _START_ đến _END_ trong _TOTAL_ thành viên",
+      "infoEmpty": "Không có thành viên nào có sẵn",
+      "infoFiltered": "(Lọc từ _MAX_ thành viên)",
+      "search": "Tìm kiếm:",
+      "paginate": {
+          "first":      "Đầu",
+          "last":       "Cuối",
+          "next":       "Sau",
+          "previous":   "Trước"
+      },
+    },
+    "order": [[ 2, "desc" ]],
+    "pagingType": "full_numbers",
+  })
+
+  $('#historySingle').DataTable().search( 'false' ).draw();
+  $('#historyCouple').DataTable().search( 'true' ).draw();
+  
+} );
+$(document).ready(function() {
+  
+})
+

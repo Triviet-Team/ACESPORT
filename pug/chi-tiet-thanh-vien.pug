@@ -1,0 +1,136 @@
+extends inc
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item
+                a(href='bang-diem.html') Bảng điểm
+              li.breadcrumb-item.active Địch Lệ Nhiệt Ba
+    
+    section.member-page
+      .container
+        .box-member-title
+          h3 Thông tin cá nhân
+        .box-member
+          .row
+            .col-md-4
+              .box-member-img
+                a.fancybox(title='Nhấp để phóng to hình', data-fancybox="gallery", href='../img/ava.jpg')
+                  img(src='../img/ava.jpg', alt='')
+
+                p.title-member Thông tin liên lạc:
+                h5 
+                  i.mdi.mdi-map-marker-radius
+                  | Số 1 Phường 2, Quận 3, Tân Cương
+                h5
+                  i.mdi.mdi-email-variant
+                  | dichlenhietba@gmail.com
+                h5
+                  i.mdi.mdi-phone-classic
+                  | 0912345678
+
+            .col-md-8
+              .box-member-detail
+                h3 Địch Lệ Nhiệt Ba
+                p Dilireba
+                ul
+                  li
+                    label Giới tính:
+                    | Nữ
+                  li
+                    label Đơn vị công tác:
+                    | Diễn viên điện ảnh
+                  li
+                    label Năm sinh:
+                    | 1992
+
+                h5.title-member Giới thiệu bản thân:
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        .box-member-title
+          h3 Thống kê chung
+        .box-member.chart
+          .row
+            .col-sm-6.box-member-detail
+              ul
+                li
+                  label Xếp hạng:
+                  | 100
+                li
+                  label Số trận thắng:
+                  | 1
+                li
+                  label Số trận thua:
+                  | 199
+                li
+                  label Tổng điểm:
+                  | 666
+                li
+                  label Tổng tiển thưởng:
+                  | 99.000.000 đ
+
+            .col-sm-6.box-member-detail
+              ul
+                li
+                  label Số lần tham dự:
+                  | 100
+                li
+                  label Số lần hạng 1:
+                  | 1
+                li
+                  label Số lần hạng 2:
+                  | 199
+                li
+                  label Số lần hạng 3:
+                  | 666
+
+        .box-member-title
+          h3 Lịch sử trận đấu
+        .box-member-tabs
+          ul.nav.nav-tabs(role='tablist')
+            li.nav-item
+              a#tableSingle-tab.nav-link.active(data-toggle='tab', href='#tableSingle', role='tab', aria-controls='tableSingle', aria-selected='true') 
+                | Đơn
+            li.nav-item
+              a#tableCouple-tab.nav-link(data-toggle='tab', href='#tableCouple', role='tab', aria-controls='tableCouple', aria-selected='false') 
+                | Đôi
+            li.nav-item
+              a#tableCoupleGender-tab.nav-link(data-toggle='tab', href='#tableCoupleGender', role='tab', aria-controls='tableCoupleGender', aria-selected='false') 
+                | Đôi nam 
+                
+        .box-member-tabs-content
+          .tab-content
+            #tableSingle.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tableSingle-tab') 
+              .table-responsive
+                table.table.table-bordered.table-hover.display.history-table#historySingle( style='width: 100%')
+                  thead
+                    tr
+                      th(scope='col') Dạng
+                      th(scope='col') Tên Giải đấu
+                      th(scope='col') Ngày bắt đầu
+                      th(scope='col') Thứ hạng
+                      th(scope='col') Tổng tỉ số
+                      th(scope='col') Điểm
+                      th(scope='col') Tiền thưởng
+          
+            #tableCouple.tab-pane.fade(role='tabpanel', aria-labelledby='tableCole-tabup') 
+              .table-responsive
+                table.table.table-bordered.table-hover.display.history-table#historyCouple(style='width: 100%')
+                  thead
+                    tr
+                      th(scope='col') Dạng
+                      th(scope='col') Tên Giải đấu
+                      th(scope='col') Ngày bắt đầu
+                      th(scope='col') Thứ hạng
+                      th(scope='col') Tổng tỉ số
+                      th(scope='col') Điểm
+                      th(scope='col') Tiền thưởng
+
+block script
+  script(src='../js/data.js')
