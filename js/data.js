@@ -186,9 +186,6 @@ $(document).ready(function() {
       "url": "http://5bb8ef65b6ed2c0014d47508.mockapi.io/Ok/history",
       "dataSrc": ""
     },
-    scrollY:        500,
-    scrollCollapse: true,
-    paging:         false,
     "columns": [
       { 
         "data": "historyType",
@@ -247,17 +244,28 @@ $(document).ready(function() {
           );
         },
       },
-
+      { 
+        "data": "action",
+        "render": function(data, type, row) {
+          return (
+            `
+              <button>
+                <a onclick="openWin()" target="_blank" class="watch-branch-btn" href="xem-nhanh-dau.html">Xem nhánh đấu</a>
+              </button>
+            `
+          );
+        },
+      },
     ],
     "language": {
       "processing": "Đang tải",
-      "lengthMenu": "Hiển thị _MENU_ thành viên",
+      "lengthMenu": "Hiển thị _MENU_ mục",
       "emptyTable":     "Không có dữ liệu nào trong bảng",
       "loadingRecords": "Đang tải...",
-      "zeroRecords": "Không có thành viên nào được tìm thấy",
-      "info": "Hiển thị _START_ đến _END_ trong _TOTAL_ thành viên",
-      "infoEmpty": "Không có thành viên nào có sẵn",
-      "infoFiltered": "(Lọc từ _MAX_ thành viên)",
+      "zeroRecords": "Không có mục nào được tìm thấy",
+      "info": "Hiển thị _START_ đến _END_ trong _TOTAL_ mục",
+      "infoEmpty": "Không có mục nào có sẵn",
+      "infoFiltered": "(Lọc từ _MAX_ mục)",
       "search": "Tìm kiếm:",
       "paginate": {
           "first":      "Đầu",
@@ -268,13 +276,16 @@ $(document).ready(function() {
     },
     "order": [[ 2, "desc" ]],
     "pagingType": "full_numbers",
-  })
+    "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "Tất cả"]]
+  });
 
   $('#historySingle').DataTable().search( 'false' ).draw();
   $('#historyCouple').DataTable().search( 'true' ).draw();
-  
-} );
-$(document).ready(function() {
-  
-})
 
+} );
+
+var myWindow;
+
+function openWin() {
+  myWindow = window.open("xem-nhanh-dau.html", "", "width=600, height=600");
+}

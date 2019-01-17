@@ -1,0 +1,133 @@
+block style
+  link(rel="stylesheet", href="../css/jquery.bracket.min.css")
+  link(rel='stylesheet', href='../css/layout.css')
+  style.
+    body {
+      overflow: auto;
+      font-size: 14px;
+      background: white;
+    }
+
+
+section.watch-section
+  h4.watch-branch-title Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, ea.
+
+  .watch-branch-round
+    .box-watch-branch
+      h4 Vòng 1/16
+    .box-watch-branch
+      h4 Vòng 1/8
+    .box-watch-branch
+      h4 Tứ kết
+    .box-watch-branch
+      h4 Bán kết
+    .box-watch-branch
+      h4 Chung kết
+
+  .watch-branch
+
+block script
+  script(src='../js/jquery-3.3.1.min.js')
+  script(src='../js/jquery.bracket.min.js')
+  script.
+    
+    //- var customData = {
+    //-     teams : [
+    //-       [{name: "Team 1", flag: 'fi'}, null],
+    //-       [{name: "Team 3", flag: 'se'}, {name: "Team 4", flag: 'us'}]
+    //-     ],
+    //-     results : []
+    //-   }
+    
+    
+    //- function edit_fn(container, data, doneCb) {
+    //-   var input = $('<input type="text">')
+    //-   input.val(data ? data.name : '')
+    //-   container.html(input)
+    //-   input.focus()
+    //-   input.blur(function() {
+    //-     var inputValue = input.val()
+    //-     if (inputValue.length === 0) {
+    //-       doneCb(null); 
+    //-     } else {
+    //-       var flagAndName = inputValue 
+    //-       doneCb({name: flagAndName})
+    //-     }
+    //-   })
+    //- }
+
+    //- function render_fn(container, data, score, state) {
+    //-   switch(state) {
+    //-     case "empty-bye":
+    //-       container.append("No team")
+    //-       return;
+    //-     case "empty-tbd":
+    //-       container.append("Upcoming")
+    //-       return;
+    
+    //-     case "entry-no-score":
+    //-     case "entry-default-win":
+    //-     case "entry-complete":
+    //-       container.append(data.name)
+    //-       return;
+    //-   }
+    //- }
+    
+    //- $(function() {
+    //-   $('.watch-branch').bracket({
+    //-     init: customData,
+    //-     save: function(){},
+    //-     decorator: {edit: edit_fn,
+    //-                 render: render_fn}})
+    //-   })
+    
+
+    var minimalData = {
+        teams : [
+          ["Team 1", "Team 2"],
+          ["Team 3", "Team 4"],
+          ["Team 5", "Team 6"],
+          ["Team 7", "Team 8"],
+          ["Team 9", "Team 10"],
+          ["Team 11", "Team 12"],
+          ["Team 13", "Team 14"],
+          ["Team 15", "Team 16"],
+          ["Team 17", "Team 18"],
+          ["Team 19", "Team 20"],
+          ["Team 21", "Team 22"],
+          ["Team 23", "Team 24"],
+          ["Team 25", "Team 26"],
+          ["Team 27", "Team 28"],
+          ["Team 29", "Team 30"],
+          ["Team 31", "Team 32"],
+        ],
+        results : [
+          [
+            [1,2], [3,4], [5,6], [6,5], 
+            [1,2], [3,4], [5,6], [6,5], 
+            [1,2], [3,4], [5,6], [6,5], 
+            [1,2], [3,4], [5,6], [6,5]
+          ],       
+          [
+            [4,6], [2,1], [4,6], [2,1], 
+            [4,6], [2,1], [4,6], [2,1]
+          ],
+          [[4,6], [2,1], [4,6], [2,1]],
+          [[4,6], [2,1]],
+          [[4,6], [2,1]],
+        ]
+      }
+    
+    var resizeParameters = {
+      teamWidth: 180,
+      scoreWidth: 20,
+      matchMargin: 20,
+      roundMargin: 35,
+      init: minimalData
+    };
+    
+    function updateResizeDemo() {
+      $('.watch-branch').bracket(resizeParameters)
+    }
+    
+    $(updateResizeDemo)

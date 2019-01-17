@@ -138,38 +138,34 @@ $('document').ready(function() {
   });
   // end
 
-
+  // Append comment
   $('.comment-first-box').keyup(function() {
     let keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){ 
+      $('.comment-first-box input').val('');
+
       $('.comment-area').append(
         `
           <div class="box-comment">
-            <div class="row">
-              <div class="col-2">
-                <div class="box-comment-author text-center"><a title="Nhấp để xem hồ sơ" href="chi-tiet-thanh-vien.html"><img src="../img/avatar.jpeg" /></a>
-                  <h5> <a title="Nhấp để xem hồ sơ" href="chi-tiet-thanh-vien.html">Kemmie</a></h5>
-                  <p>Điểm: 500</p>
-                  <p>Hạng: 10</p>
-                </div>
+            <div class="box-comment-author text-center"><a title="Nhấp để xem hồ sơ" href="chi-tiet-thanh-vien.html"><img src="../img/avatar.jpeg" /></a>
+              <h5> <a title="Nhấp để xem hồ sơ" href="chi-tiet-thanh-vien.html">Kemmie</a></h5>
+              <p>Điểm: 500</p>
+              <p>Hạng: 10</p>
+            </div>
+            <div class="box-comment-detail">
+              <div class="box-comment-detail-date">
+                <h5>15/01/2019 - 17:30</h5>
+                <button class="btn btn-light waves-effect waves-light delete-comment text-right">Xóa bình luận</button>
               </div>
-              <div class="col-10">
-                <div class="box-comment-detail">
-                  <div class="box-comment-detail-date">
-                    <h5>15/01/2019 - 17:30</h5>
-                    <button class="btn btn-light waves-effect waves-light delete-comment text-right">Xóa bình luận</button>
-                  </div>
-                  <div class="box-comment-detail-content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
-                    <div class="sub-comment"></div>
-                    <div class="comment-reply">
-                      <button class="btn btn-indigo waves-effect waves-light">Trả lời</button>
-                      <div class="comment-reply-form"><img src="../img/avatar.jpeg" />
-                        <input class="form-control" type="text" placeholder="Viết phản hồi. . ." />
-                      </div>
-                    </div>
+              <div class="box-comment-detail-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?</p>
+                <div class="sub-comment"></div>
+                <div class="comment-reply">
+                  <button class="btn btn-indigo waves-effect waves-light">Trả lời</button>
+                  <div class="comment-reply-form"><img src="../img/avatar.jpeg" />
+                    <input class="form-control" type="text" placeholder="Viết phản hồi. . ." />
                   </div>
                 </div>
               </div>
@@ -186,54 +182,45 @@ $('document').ready(function() {
       .find('.comment-reply-form')
       .css('display', 'flex');
 
+    $(this).parent().find('input').focus();
   });
 
   $(document).on('keyup', '.comment-reply-form', function() {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     let subComment = $(this).parent().parent().find('.sub-comment');
+
     if(keycode == '13'){
-      $('.comment-reply-form input')
-        .remove()
-  
-      $('.comment-reply-form')
-        .append(`<input class="form-control" type="text" placeholder="Viết phản hồi. . ."/>`);
-  
+      $('.comment-reply-form input').val('');
+
       subComment.append(
         `
           <div class="box-sub-comment">
-            <div class="row">
-              <div class="col-2">
-                <div class="box-sub-comment-img">
-                  <a href="chi-tiet-thanh-vien.html">
-                    <img src="../img/avatar.jpeg" />
-                  </a>
-                  <h5>
-                    <a href="chi-tiet-thanh-vien.html">Kemmie</a>
-                  </h5>
-                </div>
-              </div>
-    
-              <div class="col-8">
-                <div class="box-sub-comment-content">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat maga enim?</p>
-                  <button class="sub-comment-del">Xóa bình luận</button>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="box-sub-comment-date text-center">
-                  <h5>17:30</h5>
-                  <h5>15/01/2018</h5>
-                </div>
-              </div>  
+            <div class="box-sub-comment-img">
+              <a href="chi-tiet-thanh-vien.html">
+                <img src="../img/avatar.jpeg" />
+              </a>
+              <h5>
+                <a href="chi-tiet-thanh-vien.html">Kemmie</a>
+              </h5>
+            </div>
+            <div class="box-sub-comment-content">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat maga enim?</p>
+              <button class="sub-comment-del">Xóa bình luận</button>
+            </div>
+            <div class="box-sub-comment-date text-center">
+              <h5>17:30</h5>
+              <h5>15/01/2018</h5>
             </div>
           </div>
         `
       );
     };
   });
-
+  // end
+  
+  // popup delete
   $(document).on('click', '.delete-comment', function() {
-    let url = $(this).parent().parent().parent().parent().parent();
+    let url = $(this).parent().parent().parent();
 
     Swal({
       title: 'Bạn chắc chắn chứ?',
@@ -259,8 +246,34 @@ $('document').ready(function() {
     })
   });
 
-});
+  $(document).on('click', '.sub-comment-del', function() {
+    let url = $(this).parent().parent();
 
+    Swal({
+      title: 'Bạn chắc chắn chứ?',
+      text: "Xóa sẽ không phục hồi lại được!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Tôi đồng ý, Xóa!',
+      cancelButtonText: 'Hủy bỏ'
+    }).then((result) => {
+      if (result.value) {
+        Swal(
+          'Xóa thành công!',
+          'Bạn đã xóa bình luận thành công.',
+          'success'
+        ).then(function(res) {
+          if (res) {
+            url.empty();
+          }
+        });
+      }
+    })
+  });
+  // end
+});
 
 
 // validate login
