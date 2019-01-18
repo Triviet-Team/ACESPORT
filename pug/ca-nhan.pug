@@ -1,0 +1,120 @@
+extends inc
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item.active Cá nhân
+    
+    section.member-page
+      .container
+        .box-member-tabs
+          ul.nav.nav-tabs(role='tablist')
+            li.nav-item
+              a#profile-tab.nav-link.active(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='true') 
+                | Thông tin cá nhân
+            li.nav-item
+              a#setting-tab.nav-link(data-toggle='tab', href='#setting', role='tab', aria-controls='setting', aria-selected='false') 
+                | Chỉnh sửa
+        .tab-content
+          #profile.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='profile-tab') 
+            .box-member
+              .row
+                .col-md-4
+                  .box-member-img
+                    a.fancybox(title='Nhấp để phóng to hình', data-fancybox="gallery", href='../img/ava.jpg')
+                      img(src='../img/ava.jpg', alt='')
+
+                    p.title-member Thông tin liên lạc:
+                    h5 
+                      i.mdi.mdi-map-marker-radius
+                      | Số 1 Phường 2, Quận 3, Tân Cương
+                    h5
+                      i.mdi.mdi-email-variant
+                      | dichlenhietba@gmail.com
+                    h5
+                      i.mdi.mdi-phone-classic
+                      | 0912345678
+
+                .col-md-8
+                  .box-member-detail
+                    h3 Địch Lệ Nhiệt Ba
+                    p Dilireba
+                    ul
+                      li
+                        label Giới tính:
+                        | Nữ
+                      li
+                        label Đơn vị công tác:
+                        | Diễn viên điện ảnh
+                      li
+                        label Năm sinh:
+                        | 1992
+
+                    h5.title-member Giới thiệu bản thân:
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+          #setting.tab-pane.fade(role='tabpanel', aria-labelledby='setting-tab') 
+            .box-member
+              form
+                .row
+                  .col-md-4
+                    .box-member-setting-img
+                      .box-member-setting-img-update
+                        input#avatar-file.inputfile(type='file', name='file')
+                        label(for='avatar-file') Cập nhật
+                    
+                    .box-member-setting-about
+                      h4 Lời giới thiệu bản thân:
+                      textarea.form-control(placeholder='Nhập lời giới thiệu')
+                  
+                  .col-md-8
+                    .box-member-setting-form
+                      .row
+                        .col-sm-6
+                          label(for='first-name-setting') Họ và tên đệm:
+                          input#first-name-setting.form-control(type='text')
+                        .col-sm-6
+                          label(for='last-name-setting') Tên:
+                          input#last-name-setting.form-control(type='text')
+                        .col-sm-6
+                          label(for='nickname-setting') Nick name:
+                          input#nickname-setting.form-control(type='text')
+                        .col-sm-6.gender-setting
+                          h5 Giới tính:
+                          label.check-gender
+                            | Nam
+                            input(type='radio', checked='checked', name='radio')
+                            span.checkmark
+
+                          label.check-gender
+                            | Nữ
+                            input(type='radio', name='radio')
+                            span.checkmark
+
+                        .col-sm-6
+                          label(for='birth-setting') Ngày sinh:
+                          input#birth-setting.form-control(type='date')
+                        .col-sm-6
+                          label(for='company-setting') Đơn vị công tác:
+                          input#company-setting.form-control(type='text')
+                        .col-sm-6
+                          label(for='address-setting') Địa chỉ:
+                          input#address-setting.form-control(type='text')
+                        .col-sm-6
+                          label(for='phone-setting') Số điện thoại:
+                          input#phone-setting.form-control(type='text')
+                        .col-sm-6
+                          label(for='email-setting') Email:
+                          input#email-setting.form-control(type='text')
+
+                .form-submit
+                  button(type='submit').btn.btn-indigo
+                    | Cập nhật
+                  button(type='button').btn.btn-light.text-right
+                    a(href='ca-nhan.html') Trở lại

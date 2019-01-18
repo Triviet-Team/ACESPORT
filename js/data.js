@@ -246,6 +246,7 @@ $(document).ready(function() {
       },
       { 
         "data": "action",
+        "sortable": false,
         "render": function(data, type, row) {
           return (
             `
