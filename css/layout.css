@@ -179,7 +179,7 @@ article {
   width: 103%;
   color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .intro-home.intro0 {
   background-image: url("../img/home-1.jpeg");
@@ -1891,7 +1891,7 @@ div.jQBracket .bracket {
 
   .intro-home {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width: auto;
     margin-right: -15px;
     padding-top: 60px;

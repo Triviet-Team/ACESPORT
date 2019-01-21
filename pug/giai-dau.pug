@@ -16,516 +16,332 @@ block article
         .title-page.text-center
           h1 
             a giải đấu
-        .page-tour
-          .tour-left-large
-            .tour-left
-              .tour-search       
-                form
-                  a
-                    i.mdi.mdi-magnify
-                  input.form-control(type='text', placeholder='Nhập từ khóa')
+        .grid-box
+          .left
+            .box-left
+              .title-left
+                h5 bảng điểm
+              ul
+                li
+                  a(href='bang-diem.html') Tất cả 
+                li
+                  a.score-btn-male(href='bang-diem-nam.html') Nam 
+                li
+                  a.score-btn-female(href='bang-diem-nu.html') Nữ
 
-                ul.nav.nav-tabs.d-none.d-sm-block(role='tablist')
-                  li.nav-item
-                    a#tour-1-tab.nav-link.active(data-toggle='tab', href='#tour-1', role='tab', aria-controls='tour-1', aria-selected='true') 
-                      | Giải đấu mới
-                  li.nav-item
-                    a#tour-2-tab.nav-link(data-toggle='tab', href='#tour-2', role='tab', aria-controls='tour-2', aria-selected='true') 
-                      | Giải đấu đã diễn ra
-                  li.nav-item
-                    a#tour-3-tab.nav-link(data-toggle='tab', href='#tour-3', role='tab', aria-controls='tour-3', aria-selected='true') 
-                      | Giải đấu đã kết thúc
-                  li.nav-item
-                    a#tour-4-tab.nav-link(data-toggle='tab', href='#tour-4', role='tab', aria-controls='tour-4', aria-selected='true') 
-                      | Thư viện ảnh
-
-                nav.navbar.navbar-light.d-block.d-sm-none
-                  button.navbar-toggler.toggler-example(type='button', data-toggle='collapse', data-target='#hotProduct', aria-controls='hotProduct', aria-expanded='false', aria-label='Toggle navigation')
-                    a.navbar-brand Giải đấu mới
-                  i.mdi.mdi-chevron-down
-                  #hotProduct.collapse.navbar-collapse
-                    ul.nav.navbar-nav.mr-auto
-                      li.nav-item
-                        a#tour-1-tab.nav-link.active(data-toggle='tab', href='#tour-1', role='tab', aria-controls='tour-1', aria-selected='true') 
-                          | Giải đấu mới
-                      li.nav-item
-                        a#tour-2-tab.nav-link(data-toggle='tab', href='#tour-2', role='tab', aria-controls='tour-2', aria-selected='true') 
-                          | Giải đấu đã diễn ra
-                      li.nav-item
-                        a#tour-3-tab.nav-link(data-toggle='tab', href='#tour-3', role='tab', aria-controls='tour-3', aria-selected='true') 
-                          | Giải đấu đã kết thúc
-                      li.nav-item
-                        a#tour-4-tab.nav-link(data-toggle='tab', href='#tour-4', role='tab', aria-controls='tour-4', aria-selected='true') 
-                          | Thư viện ảnh
-
-          .tour-main
-            .tab-content
-              #tour-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tour-1-tab')      
-                h2 giải đấu mới
-
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | 10 Kids Unaware of Their Halloween Costume
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
-
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
-
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
-
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
-
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
+            .box-left
+              .title-left
+                h5 giải đấu mới
+              ul
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
                 
+            .box-left
+              .title-left
+                h5 giải đấu đang diễn ra
+              ul
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+                li
+                  a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
+           
 
-              #tour-2.tab-pane.fade(role='tabpanel', aria-labelledby='tour-2-tab')      
-                h2 giải đấu đã diễn ra
+          .tour-main.main
+            h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, voluptatem.
 
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar2.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar2.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar2.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar2.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                .box-tour
-                  .row
-                    .col-md-8.col-12
-                      .box-tour-content
-                        h4 
-                          a(href='chi-tiet-giai-dau.html')
-                            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, est?
-                        h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
 
-                    .col-md-1.col-3.order-md-first.order-0
-                      .box-tour-author
-                        img(src='../img/avatar.jpeg')
-                        h6 Admin
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
 
-                    .col-md-3.col-9
-                      .box-tour-info.text-center
-                        .box-tour-info-comment
-                          h5 100
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
 
-                        .box-tour-info-view
-                          i.mdi.mdi-eye
-                          | 101
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
 
-                        .box-tour-info-date
-                          i.mdi.mdi-calendar-clock
-                          | 14/01/2019 - 17:30
-                //- END BOX TOUR
-                
-                
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
+
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
+
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
+
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
+
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
+
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
+
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
+            .box-tour
+              .row
+                .col-md-8.col-12
+                  .box-tour-content
+                    h4 
+                      a(href='chi-tiet-giai-dau.html')
+                        | 10 Kids Unaware of Their Halloween Costume
+                    h5  It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative. It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.
+
+                .col-md-1.col-3.order-md-first.order-0
+                  .box-tour-author
+                    img(src='../img/avatar.jpeg')
+                    h6 Admin
+
+                .col-md-3.col-9
+                  .box-tour-info.text-center
+                    .box-tour-info-comment
+                      h5 100
+
+                    .box-tour-info-view
+                      i.mdi.mdi-eye
+                      | 101
+
+                    .box-tour-info-date
+                      i.mdi.mdi-calendar-clock
+                      | 14/01/2019 - 17:30
+            //- END BOX TOUR
