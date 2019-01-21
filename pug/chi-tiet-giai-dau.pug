@@ -17,35 +17,297 @@ block article
       .container
         .title-page-text
           h2 10 Kids Unaware of Their Halloween Cosfume
-        
-        .box-post
-          .box-post-author.text-center
-            img(src='../img/avatar.jpeg')
-            h5 Admin
 
-          .box-post-detail
-            .box-post-detail-date
-              h5 15/01/2019 - 17:30
-            .box-post-detail-content
-              h3.mb-3.text-center 
-                b 10 Kids Unaware of Their Halloween Costsdfume
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
-            .box-post-detail-tags
-              h5 Tags: 
-                span 
-                  a(href='#') Giải đấu vui vẻ,
-                span 
-                  a(href='#') Giải đấu khô máu
+        nav.navbar.navbar-light.d-block.d-md-none
+          button.navbar-toggler.toggler-example(type='button', data-toggle='collapse', data-target='#tourTab', aria-controls='tourTab', aria-expanded='false', aria-label='Toggle navigation')
+            a.navbar-brand Điều lệ
+          i.mdi.mdi-chevron-down
+          #tourTab.collapse.navbar-collapse
+            ul.nav.navbar-nav.mr-auto
+              li.nav-item
+                a#general-tab.nav-link.active(data-toggle='tab', href='#general', role='tab', aria-controls='general', aria-selected='true') 
+                  | Điều lệ
+              li.nav-item
+                a#schedule-tab.nav-link(data-toggle='tab', href='#schedule', role='tab', aria-controls='schedule', aria-selected='true') 
+                  | Lịch thi đấu
+              li.nav-item
+                a#result-tab.nav-link(data-toggle='tab', href='#result', role='tab', aria-controls='result', aria-selected='true') 
+                  | Kết quả
+              li.nav-item
+                a#player-tab.nav-link(data-toggle='tab', href='#player', role='tab', aria-controls='player', aria-selected='true') 
+                  | Vận động viên
+              li.nav-item
+                a#branchTour-tab.nav-link(data-toggle='tab', href='#branchTour', role='tab', aria-controls='branchTour', aria-selected='true') 
+                  | Nhánh đấu
+              li.nav-item
+                a#save-tab.nav-link(data-toggle='tab', href='#save', role='tab', aria-controls='save', aria-selected='true') 
+                  | Lưu trữ
+              li.nav-item
+                a#comment-tab.nav-link(data-toggle='tab', href='#comment', role='tab', aria-controls='comment', aria-selected='true') 
+                  | Bình luận
+              
 
-        .comment-first
-          .comment-first-img
-            img(src='../img/avatar.jpeg')
-          .comment-first-box
-            input.form-control(type="text", placeholder="Viết bình luận. . .")    
-        .comment-area
+        ul.nav.nav-tabs.d-none.d-md-block(role='tablist')
+          li.nav-item
+            a#general-tab.nav-link.active(data-toggle='tab', href='#general', role='tab', aria-controls='general', aria-selected='true') 
+              | Điều lệ
+          li.nav-item
+            a#schedule-tab.nav-link(data-toggle='tab', href='#schedule', role='tab', aria-controls='schedule', aria-selected='true') 
+              | Lịch thi đấu
+          li.nav-item
+            a#result-tab.nav-link(data-toggle='tab', href='#result', role='tab', aria-controls='result', aria-selected='true') 
+              | Kết quả
+          li.nav-item
+            a#player-tab.nav-link(data-toggle='tab', href='#player', role='tab', aria-controls='player', aria-selected='true') 
+              | Vận động viên
+          li.nav-item
+            a#branchTour-tab.nav-link(data-toggle='tab', href='#branchTour', role='tab', aria-controls='branchTour', aria-selected='true') 
+              | Nhánh đấu
+          li.nav-item
+            a#save-tab.nav-link(data-toggle='tab', href='#save', role='tab', aria-controls='save', aria-selected='true') 
+              | Lưu trữ
+          li.nav-item
+            a#comment-tab.nav-link(data-toggle='tab', href='#comment', role='tab', aria-controls='comment', aria-selected='true') 
+              | Bình luận
+          
+        .tab-content
+          #general.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='general-tab')      
+            .box-post
+              .box-post-author.text-center
+                img(src='../img/avatar.jpeg')
+                h5 Admin
+
+              .box-post-detail
+                .box-post-detail-date
+                  h5 15/01/2019 - 17:30
+                .box-post-detail-content
+                  h3.mb-3.text-center 
+                    b 10 Kids Unaware of Their Halloween Costsdfume
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam repudiandae, natus velit ab nulla magni cumque quidem maiores sapiente sequi fugit. Nulla cupiditate impedit, dolorum placeat nisi ipsa enim?
+                .box-post-detail-tags
+                  h5 Tags: 
+                    span 
+                      a(href='#') Giải đấu vui vẻ,
+                    span 
+                      a(href='#') Giải đấu khô máu
+
+          #schedule.tab-pane.fade(role='tabpanel', aria-labelledby='schedule-tab')      
+            table.table.table-bordered.table-hover#schedule-table( style='width: 100%')
+              tbody
+                tr
+                  th(colspan='5') Vòng bảng
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+
+                tr
+                  th(colspan='5') Vòng 1/16
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+
+                tr
+                  th(colspan='5') Vòng Tứ kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+
+                tr
+                  th(colspan='5') Vòng bán kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+
+                tr
+                  th(colspan='5') Vòng chung kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+
+          #result.tab-pane.fade(role='tabpanel', aria-labelledby='result-tab')      
+            table.table.table-bordered.table-hover#result-table( style='width: 100%')
+              tbody
+                tr
+                  th(colspan='5') Vòng bảng
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+
+                tr
+                  th(colspan='5') Vòng 1/16
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+
+                tr
+                  th(colspan='5') Vòng Tứ kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+
+                tr
+                  th(colspan='5') Vòng bán kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+
+                tr
+                  th(colspan='5') Vòng chung kết
+                tr
+                  td(scope='col') 21/01/2019
+                  td(scope='col') Nguyễn Phong Thái
+                  td(scope='col') Hà Dĩ Thái
+                  td(scope='col') 5:4
+
+          #player.tab-pane.fade(role='tabpanel', aria-labelledby='player-tab')      
+            table.table.table-bordered.table-hover#player-table( style='width: 100%')
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+              tr
+                td
+                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+              
+          #branchTour.tab-pane.fade(role='tabpanel', aria-labelledby='branchTour-tab')      
+            h4 
+              a(target="_blank", href='xem-nhanh-dau.html') Nhấp để xem nhánh đấu
+          
+          #save.tab-pane.fade(role='tabpanel', aria-labelledby='save-tab')      
+            table.table.table-bordered.table-hover#save-table( style='width: 100%')
+              thead
+                tr
+                  th(scope='col') Mùa giải
+                  th(scope='col') Đội vô địch
+
+              tbody
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                tr 
+                  td(scope='col') 
+                    a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
+                  td(scope='col') Federer Roger
+                
+
+          #comment.tab-pane.fade(role='tabpanel', aria-labelledby='comment-tab')      
+            .comment-first
+              .comment-first-img
+                img(src='../img/avatar.jpeg')
+              .comment-first-box
+                input.form-control(type="text", placeholder="Viết bình luận. . .")    
+            .comment-area

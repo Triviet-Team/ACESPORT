@@ -1,5 +1,5 @@
 @import 'default';
-$main_color: #3D35BE;
+$main_color: #055699;
 
 // end default css -----------------------------------------------------
 
@@ -334,7 +334,7 @@ $main_color: #3D35BE;
   
         &:hover {
           a {
-            background: #1f1984;
+            background: #02467d;
           }
         }
   
@@ -345,7 +345,7 @@ $main_color: #3D35BE;
   
         .active {
           border-radius: 5px;
-          background: #1f1984;
+          background: #02467d;
           color: white;
           border: 0;
         }
@@ -851,6 +851,7 @@ $main_color: #3D35BE;
 
     td {
       font-weight: 500;
+      padding: .5rem;
 
       a {
         transition: none;
@@ -909,6 +910,46 @@ $main_color: #3D35BE;
     }
   }
 
+  .navbar {
+    margin-bottom: 20px;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #858585;
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: 0;
+    margin-bottom: 20px;
+
+    li {
+      display: inline-block;
+      margin-right: -2px;
+
+      a {
+        border-radius: 0;
+        padding: 10px 20px;
+        border: 0;
+        background: white;
+
+        &:hover {
+          color: white;
+          background: $main_color;
+        }
+      }
+
+      .active {
+        background: $main_color;
+        color: white;
+      }
+    }
+  }
+
   .box-post {
     background: white;
     padding: 0 30px;
@@ -963,6 +1004,54 @@ $main_color: #3D35BE;
           &:hover {
             color: black;
           }
+        }
+      }
+    }
+  }
+
+  #schedule, #result, #player, #save {
+    table.table-bordered tbody tr {
+      background: white;
+      font-size: 1rem;
+      transition: 0;
+  
+      td {
+        font-weight: 500;
+        padding: .5rem;
+  
+        a {
+          transition: none;
+        }
+  
+        a:hover {
+          color: $main_color;
+          transition: 0;
+        }
+      }
+  
+      &:hover {
+        background: #f4f4f4;
+      }
+    }
+  
+    table.table th {
+      border-top: none;
+      background: #e1e1e1;
+      border-right: 1px solid #ccc;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  #branchTour {
+    h4 {
+      margin-bottom: 30px;
+
+      a {
+        transition: .5s;
+
+        &:hover {
+          color: $main_color;
         }
       }
     }
@@ -1465,11 +1554,6 @@ $main_color: #3D35BE;
 
   .box-member-tabs-content {
     margin-bottom: 30px;
-
-    div.dataTables_wrapper div.dataTables_info,
-    div.dataTables_wrapper div.dataTables_filter {
-      display: none;
-    }
   
     table.table-bordered.dataTable tbody tr {
       background: white;
@@ -1722,8 +1806,83 @@ div.jQBracket .bracket {
   }
 }
 
+.grid-box {
+  display: grid;
+  grid-template-columns: 200px calc(100% - 200px);
+  grid-column-gap: 30px;
+}
 
+.left {
 
+  .box-left {
+    margin-bottom: 20px;
+    background: white;
+    padding-bottom: 10px;
+
+    ul {
+      padding: 0 15px;
+      
+      li {
+        padding-bottom: 10px;
+
+        a {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          transition: .5s;
+          font-size: 13px;
+
+          &:hover {
+            color: $main_color;
+            padding-left: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .title-left {
+    width: 100%;
+    background: $main_color;
+    color: white;
+    height: 40px;
+    margin-bottom: 20px;
+
+    h5 {
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+}
+
+.score-board-tabs {
+  .nav-tabs {
+    border-bottom: 0;
+    margin-bottom: 20px;
+
+    li {
+      a {
+        border-radius: 0;
+        padding: 10px 20px;
+        border: 0;
+        background: white;
+        margin-right: 1px;
+
+        &:hover {
+          color: white;
+          background: $main_color;
+        }
+      }
+
+      .active {
+        background: $main_color;
+        color: white;
+      }
+    }
+  }
+}
 
 
 // --------------------------------------------------------------------

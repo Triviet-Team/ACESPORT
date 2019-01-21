@@ -1,11 +1,11 @@
-$main_color: #3D35BE;
+$main_color: #055699;
 
 @media (max-width: 1440px) {}
 
 @media (max-width: 1200px) {
   body {
     margin-left: 15px;
-    font-size: calc(7px + 0.5vmax);
+    font-size: calc(9px + 0.4vmax);
   }
 }
 
@@ -224,6 +224,18 @@ $main_color: #3D35BE;
       }
     }
   }
+
+  .grid-box {
+    grid-template-columns: auto;
+
+    .left {
+      display: none;
+    }
+  }
+
+  .page-text .nav-tabs li a {
+    padding: 10px 15px;
+  }
 }
 
 
@@ -337,24 +349,8 @@ $main_color: #3D35BE;
   .page-text .comment-first {
     padding: 0 10px;
     grid-template-columns: 40px calc(100% - 60px);
-
-  }
-}
-
-@media (max-width: 575px) {
-  .login .box-login {
-    width: 100%;  
   }
 
-  .page-content .page-tour .box-tour-author {
-    padding-left: 15px;
-    margin-right: -15px;
-  }
-
-  .page-content .tour-left .tour-search form {
-    margin-bottom: 10px;
-  }
-  
   .navbar.navbar-light {
     padding: 0;
     
@@ -382,6 +378,22 @@ $main_color: #3D35BE;
     height: 50px;
     position: relative;
   }
+}
+
+@media (max-width: 575px) {
+  .login .box-login {
+    width: 100%;  
+  }
+
+  .page-content .page-tour .box-tour-author {
+    padding-left: 15px;
+    margin-right: -15px;
+  }
+
+  .page-content .tour-left .tour-search form {
+    margin-bottom: 10px;
+  }
+  
 
   .page-text .comment-first {
     padding: 0 10px;

@@ -51,7 +51,6 @@ block article
                   a(title='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.', href='chi-tiet-giai-dau.html') Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, commodi.
                 
 
-
           .score-board-main
             .score-board-tabs
               ul.nav.nav-tabs(role='tablist')
@@ -66,7 +65,7 @@ block article
                     | Nữ 
 
             .table-responsive
-              table.table.table-bordered.table-hover.display.score-board-all(style='width: 100%')
+              table.table.table-bordered.table-hover.display.score-board-all#scoreBoardMale(style='width: 100%')
                 thead
                   tr
                     th(scope='col') Hạng
@@ -74,8 +73,7 @@ block article
                     th(scope='col') Tổng điểm
                     th(scope='col') Số giải đấu
                     th.gender-score
-
-
+              
 block script
   script(src='../js/data.js')
 

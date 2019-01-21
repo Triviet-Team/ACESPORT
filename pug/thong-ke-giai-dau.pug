@@ -52,48 +52,16 @@ block article
 
         .box-member-title
           h3 Lịch sử trận đấu
-        .box-member-tabs
-          ul.nav.nav-tabs(role='tablist')
-            li.nav-item
-              a#tableSingle-tab.nav-link.active(data-toggle='tab', href='#tableSingle', role='tab', aria-controls='tableSingle', aria-selected='true') 
-                | Đơn
-            li.nav-item
-              a#tableCouple-tab.nav-link(data-toggle='tab', href='#tableCouple', role='tab', aria-controls='tableCouple', aria-selected='false') 
-                | Đôi
-            li.nav-item
-              a#tableCoupleGender-tab.nav-link(data-toggle='tab', href='#tableCoupleGender', role='tab', aria-controls='tableCoupleGender', aria-selected='false') 
-                | Đôi nam nữ
-                
         .box-member-tabs-content
-          .tab-content
-            #tableSingle.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tableSingle-tab') 
-              .table-responsive
-                table.table.table-bordered.table-hover.display.history-table#historySingle( style='width: 100%')
-                  thead
-                    tr
-                      th(scope='col') Dạng
-                      th(scope='col') Tên Giải đấu
-                      th(scope='col') Ngày bắt đầu
-                      th(scope='col') Thứ hạng
-                      th(scope='col') Tổng tỉ số
-                      th(scope='col') Điểm
-                      th(scope='col') Tiền thưởng
-                      th(scope='col') Hành động
-
-
-            #tableCouple.tab-pane.fade(role='tabpanel', aria-labelledby='tableCouple-tab') 
-              .table-responsive
-                table.table.table-bordered.table-hover.display.history-table#historyCouple(style='width: 100%')
-                  thead
-                    tr
-                      th(scope='col') Dạng
-                      th(scope='col') Tên Giải đấu
-                      th(scope='col') Ngày bắt đầu
-                      th(scope='col') Thứ hạng
-                      th(scope='col') Tổng tỉ số
-                      th(scope='col') Điểm
-                      th(scope='col') Tiền thưởng
-                      th(scope='col') Hành động
+          table.table.table-bordered.table-hover.display.history-table#history( style='width: 100%')
+            thead
+              tr
+                th(scope='col') Tên Giải đấu
+                th(scope='col') Ngày bắt đầu
+                th(scope='col') Thứ hạng
+                th(scope='col') Điểm
+                th(scope='col') Tiền thưởng
+                th(scope='col') Hành động
 
 block script
   script(src='../js/data.js')

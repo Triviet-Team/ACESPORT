@@ -9,6 +9,13 @@ $('document').ready(function() {
   });
   // END ACTIVE MENU
 
+  $(".score-board a").each( function() {
+    if (url == (this.href)) {
+      $(this).closest("li a").addClass("active");
+      $(this).closest("li li a").removeClass("active");
+    }
+  });
+
   $('.menu .nav').slideAndSwipe();
 
   let ww = document.body.clientWidth;
