@@ -696,7 +696,6 @@ article {
 }
 .page-content .tour-main h2 {
   text-transform: uppercase;
-  font-weight: 600;
   margin-bottom: 20px;
 }
 .page-content .news-detail {
@@ -1653,6 +1652,9 @@ div.jQBracket .bracket {
   -webkit-box-orient: vertical;
   transition: 0.5s;
   font-size: 13px;
+}
+.left .box-left ul li a i {
+  margin-right: 10px;
 }
 .left .box-left ul li a:hover {
   color: #055699;

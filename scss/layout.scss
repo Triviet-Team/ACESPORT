@@ -638,7 +638,6 @@ $main_color: #055699;
   .tour-main {
     h2 {
       text-transform: uppercase;
-      font-weight: 600;
       margin-bottom: 20px;
     }
   }
@@ -1832,6 +1831,10 @@ div.jQBracket .bracket {
           -webkit-box-orient: vertical;
           transition: .5s;
           font-size: 13px;
+
+          i {
+            margin-right: 10px;
+          }
 
           &:hover {
             color: $main_color;
