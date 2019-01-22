@@ -234,7 +234,7 @@ $main_color: #055699;
   }
 
   .page-text .nav-tabs li a {
-    padding: 10px 15px;
+    padding: 10px 13px;
   }
 }
 
@@ -353,6 +353,7 @@ $main_color: #055699;
 
   .navbar.navbar-light {
     padding: 0;
+    background: white;
     
     i {
       position: absolute;
@@ -431,10 +432,36 @@ $main_color: #055699;
     .box-post-detail-content {
       padding: 15px;
     }
+
+    .tab-large {
+      text-align: center;
+
+      ul {
+        margin-bottom: 0;
+
+        li {
+          margin-bottom: 40px;
+    
+          a {
+            padding: 10px 20px;
+          }
+
+          .active {
+            &::before, &::after {
+              bottom: -18px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 410px) {
+  .box-tour {
+    padding: 20px 0 20px 20px;
+  }
+
   .box-news {
     padding: 20px;
   }

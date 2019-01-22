@@ -13,9 +13,11 @@ html {
 }
 
 body {
-  background-color: #f4f4f4;
+  background-image: url("../img/bg-body.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
   font-family: "Montserrat";
-  color: black;
+  color: white;
   margin: 0;
   margin-right: 15px;
   overflow-x: hidden;
@@ -372,7 +374,7 @@ article {
 
 .bread-crumb {
   padding: 10px 0;
-  color: black;
+  color: white;
   margin-bottom: 30px;
 }
 .bread-crumb .breadcrumb {
@@ -390,10 +392,10 @@ article {
   padding-right: 15px;
 }
 .bread-crumb .breadcrumb .breadcrumb-item:hover {
-  color: #055699;
+  color: #7fc5ff;
 }
 .bread-crumb .breadcrumb .breadcrumb-item.active {
-  color: #055699;
+  color: #7fc5ff;
 }
 
 .footer {
@@ -533,6 +535,7 @@ article {
 
 .title-page {
   margin-bottom: 40px;
+  color: white;
 }
 .title-page h1 a {
   text-transform: uppercase;
@@ -543,6 +546,7 @@ article {
 
 .title-small {
   margin-bottom: 30px;
+  color: white;
 }
 .title-small h3 {
   text-transform: uppercase;
@@ -554,65 +558,10 @@ article {
 .page-content {
   margin-bottom: 40px;
   position: relative;
+  color: black;
 }
 .page-content .news-main {
   margin-bottom: 10px;
-}
-.page-content .news-right .news-search, .page-content .news-right .news-hot {
-  background: white;
-  padding: 30px 20px;
-  box-shadow: 0px 2px 1px #e1e1e1;
-  margin-bottom: 30px;
-}
-.page-content .news-right .news-search-form {
-  position: relative;
-}
-.page-content .news-right .news-search-form input {
-  background: #f4f4f4;
-  border: 1px solid #e1e1e1;
-  padding-left: 30px;
-  height: 50px;
-  border-radius: 5px;
-}
-.page-content .news-right .news-search-form input:focus {
-  box-shadow: 0 0 0 2px rgba(5, 86, 153, 0.25);
-}
-.page-content .news-right .news-search-form i {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: #858585;
-  transition: 0.5s;
-}
-.page-content .news-right .news-search-form i:hover {
-  color: #055699;
-}
-.page-content .news-right .news-hot {
-  padding-bottom: 10px;
-}
-.page-content .news-right .news-hot .box-news {
-  padding: 0;
-  background: none;
-  box-shadow: none;
-}
-.page-content .news-right .news-hot .box-news-img {
-  margin-right: -20px;
-}
-.page-content .news-right .news-hot .box-news-detail h5 {
-  margin-bottom: 10px;
-}
-.page-content .news-right .news-hot .box-news-detail h5 a {
-  font-weight: 600;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  transition: 0.5s;
-}
-.page-content .news-right .news-hot .box-news-detail h5 a:hover {
-  color: #055699;
 }
 .page-content .page-tour {
   position: relative;
@@ -697,6 +646,7 @@ article {
 .page-content .tour-main h2 {
   text-transform: uppercase;
   margin-bottom: 20px;
+  color: white;
 }
 .page-content .news-detail {
   background: white;
@@ -734,6 +684,7 @@ article {
   padding: 30px;
   background: white;
   box-shadow: 0px 2px 1px #e1e1e1;
+  color: black;
 }
 .box-news-img {
   overflow: hidden;
@@ -780,8 +731,7 @@ article {
 
 .box-tour {
   background: white;
-  padding: 20px;
-  padding-right: 0;
+  padding: 20px 0 10px 20px;
   box-shadow: 0px 2px 1px #e1e1e1;
   margin-bottom: 20px;
 }
@@ -796,6 +746,7 @@ article {
   margin-top: 10px;
   padding-top: 5px;
   border-top: 1px solid #e1e1e1;
+  color: #707070;
 }
 .box-tour-content h4 {
   margin-bottom: 10px;
@@ -807,6 +758,7 @@ article {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   transition: 0.5s;
+  color: black;
 }
 .box-tour-content h4 a:hover {
   color: #055699;
@@ -817,6 +769,7 @@ article {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   color: #8D8D8D;
+  margin-bottom: 30px;
 }
 .box-tour-info {
   border-left: 1px solid #e1e1e1;
@@ -863,9 +816,14 @@ article {
   margin-right: 5px;
 }
 .score-board table.table-bordered.dataTable tbody tr {
-  background: white;
   font-size: 1rem;
   transition: 0;
+}
+.score-board table.table-bordered.dataTable tbody tr.odd {
+  background: white;
+}
+.score-board table.table-bordered.dataTable tbody tr.even {
+  background: #f4f4f4;
 }
 .score-board table.table-bordered.dataTable tbody tr td {
   font-weight: 500;
@@ -879,7 +837,7 @@ article {
   transition: 0;
 }
 .score-board table.table-bordered.dataTable tbody tr:hover {
-  background: #f4f4f4;
+  background: #e1e1e1;
 }
 .score-board table.table thead th {
   border-top: none;
@@ -926,17 +884,18 @@ article {
 }
 .page-text .nav-tabs {
   border-bottom: 0;
-  margin-bottom: 20px;
 }
 .page-text .nav-tabs li {
   display: inline-block;
   margin-right: -2px;
+  margin-bottom: 20px;
 }
 .page-text .nav-tabs li a {
   border-radius: 0;
   padding: 10px 20px;
   border: 0;
   background: white;
+  color: black;
 }
 .page-text .nav-tabs li a:hover {
   color: white;
@@ -955,6 +914,7 @@ article {
   display: grid;
   grid-template-columns: 60px calc(100% - 60px);
   grid-column-gap: 20px;
+  color: black;
 }
 .page-text .box-post-author {
   padding: 30px 0;
@@ -994,26 +954,26 @@ article {
 .page-text .box-post-detail-tags span:hover {
   color: black;
 }
-.page-text #schedule table.table-bordered tbody tr, .page-text #result table.table-bordered tbody tr, .page-text #player table.table-bordered tbody tr, .page-text #save table.table-bordered tbody tr {
+.page-text #schedule table.table-bordered tbody tr, .page-text #result table.table-bordered tbody tr, .page-text #player table.table-bordered tbody tr, .page-text #save table.table-bordered tbody tr, .page-text #branchTour table.table-bordered tbody tr {
   background: white;
   font-size: 1rem;
   transition: 0;
 }
-.page-text #schedule table.table-bordered tbody tr td, .page-text #result table.table-bordered tbody tr td, .page-text #player table.table-bordered tbody tr td, .page-text #save table.table-bordered tbody tr td {
+.page-text #schedule table.table-bordered tbody tr td, .page-text #result table.table-bordered tbody tr td, .page-text #player table.table-bordered tbody tr td, .page-text #save table.table-bordered tbody tr td, .page-text #branchTour table.table-bordered tbody tr td {
   font-weight: 500;
   padding: 0.5rem;
 }
-.page-text #schedule table.table-bordered tbody tr td a, .page-text #result table.table-bordered tbody tr td a, .page-text #player table.table-bordered tbody tr td a, .page-text #save table.table-bordered tbody tr td a {
+.page-text #schedule table.table-bordered tbody tr td a, .page-text #result table.table-bordered tbody tr td a, .page-text #player table.table-bordered tbody tr td a, .page-text #save table.table-bordered tbody tr td a, .page-text #branchTour table.table-bordered tbody tr td a {
   transition: none;
 }
-.page-text #schedule table.table-bordered tbody tr td a:hover, .page-text #result table.table-bordered tbody tr td a:hover, .page-text #player table.table-bordered tbody tr td a:hover, .page-text #save table.table-bordered tbody tr td a:hover {
+.page-text #schedule table.table-bordered tbody tr td a:hover, .page-text #result table.table-bordered tbody tr td a:hover, .page-text #player table.table-bordered tbody tr td a:hover, .page-text #save table.table-bordered tbody tr td a:hover, .page-text #branchTour table.table-bordered tbody tr td a:hover {
   color: #055699;
   transition: 0;
 }
-.page-text #schedule table.table-bordered tbody tr:hover, .page-text #result table.table-bordered tbody tr:hover, .page-text #player table.table-bordered tbody tr:hover, .page-text #save table.table-bordered tbody tr:hover {
+.page-text #schedule table.table-bordered tbody tr:hover, .page-text #result table.table-bordered tbody tr:hover, .page-text #player table.table-bordered tbody tr:hover, .page-text #save table.table-bordered tbody tr:hover, .page-text #branchTour table.table-bordered tbody tr:hover {
   background: #f4f4f4;
 }
-.page-text #schedule table.table th, .page-text #result table.table th, .page-text #player table.table th, .page-text #save table.table th {
+.page-text #schedule table.table th, .page-text #result table.table th, .page-text #player table.table th, .page-text #save table.table th, .page-text #branchTour table.table th {
   border-top: none;
   background: #e1e1e1;
   border-right: 1px solid #ccc;
@@ -1206,6 +1166,51 @@ article {
 .page-text .sub-comment .box-sub-comment-date h5 {
   margin-bottom: 5px;
 }
+.page-text .tab-large ul {
+  margin-right: 0;
+  margin-bottom: 40px;
+}
+.page-text .tab-large ul li {
+  display: inline-block;
+  margin-right: 0px;
+  position: relative;
+}
+.page-text .tab-large ul li a {
+  padding: 20px 20px;
+  background: white;
+  color: black;
+  transition: 0.5s;
+}
+.page-text .tab-large ul li a:hover {
+  background: #055699;
+  color: white;
+}
+.page-text .tab-large ul li .active {
+  background: #055699;
+  color: white;
+}
+.page-text .tab-large ul li .active::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: calc(45% + 10px);
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #055699;
+  transform: translateX(-50%);
+}
+.page-text .tab-large ul li .active::before {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 45%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #055699;
+  transform: translateX(-50%);
+}
 
 .member-page .box-member-title {
   margin-bottom: 20px;
@@ -1219,6 +1224,7 @@ article {
   padding-bottom: 0;
   background: white;
   box-shadow: 0px 2px 1px #e1e1e1;
+  color: black;
 }
 .member-page .box-member.chart {
   padding-bottom: 20px;
@@ -1634,13 +1640,31 @@ div.jQBracket .bracket {
   grid-column-gap: 30px;
 }
 
+.table {
+  color: black !important;
+}
+
 .left .box-left {
   margin-bottom: 20px;
   background: white;
   padding-bottom: 10px;
 }
 .left .box-left ul {
-  padding: 0 15px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.left .box-left ul::-webkit-scrollbar {
+  width: 5px;
+}
+.left .box-left ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.left .box-left ul::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.left .box-left ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 .left .box-left ul li {
   padding-bottom: 10px;
@@ -1652,6 +1676,7 @@ div.jQBracket .bracket {
   -webkit-box-orient: vertical;
   transition: 0.5s;
   font-size: 13px;
+  color: black;
 }
 .left .box-left ul li a i {
   margin-right: 10px;
@@ -1665,7 +1690,6 @@ div.jQBracket .bracket {
   background: #055699;
   color: white;
   height: 40px;
-  margin-bottom: 20px;
 }
 .left .title-left h5 {
   text-transform: uppercase;
@@ -1683,6 +1707,7 @@ div.jQBracket .bracket {
   border: 0;
   background: white;
   margin-right: 1px;
+  color: black;
 }
 .score-board-tabs .nav-tabs li a:hover {
   color: white;
@@ -1690,6 +1715,12 @@ div.jQBracket .bracket {
 }
 .score-board-tabs .nav-tabs li .active {
   background: #055699;
+  color: white;
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label,
+div.dataTables_wrapper div.dataTables_info {
   color: white;
 }
 
@@ -1883,7 +1914,7 @@ div.jQBracket .bracket {
   }
 
   .page-text .nav-tabs li a {
-    padding: 10px 15px;
+    padding: 10px 13px;
   }
 }
 @media (max-width: 767px) {
@@ -1973,6 +2004,7 @@ div.jQBracket .bracket {
 
   .navbar.navbar-light {
     padding: 0;
+    background: white;
   }
   .navbar.navbar-light i {
     position: absolute;
@@ -2041,8 +2073,27 @@ div.jQBracket .bracket {
 .page-text .box-post-detail-content {
     padding: 15px;
   }
+  .page-text .tab-large {
+    text-align: center;
+  }
+  .page-text .tab-large ul {
+    margin-bottom: 0;
+  }
+  .page-text .tab-large ul li {
+    margin-bottom: 40px;
+  }
+  .page-text .tab-large ul li a {
+    padding: 10px 20px;
+  }
+  .page-text .tab-large ul li .active::before, .page-text .tab-large ul li .active::after {
+    bottom: -18px;
+  }
 }
 @media (max-width: 410px) {
+  .box-tour {
+    padding: 20px 0 20px 20px;
+  }
+
   .box-news {
     padding: 20px;
   }

@@ -238,7 +238,7 @@ $main_color: #055699;
 
 .bread-crumb {
   padding: 10px 0;
-  color: black;
+  color: white;
   margin-bottom: 30px;
 
   .breadcrumb {
@@ -260,12 +260,12 @@ $main_color: #055699;
       }
 
       &:hover {
-        color: $main_color;
+        color: #7fc5ff;
       }
     }
 
     .breadcrumb-item.active {
-      color: $main_color;
+      color: #7fc5ff;
     }
   }
 }
@@ -436,6 +436,7 @@ $main_color: #055699;
 
 .title-page {
   margin-bottom: 40px;
+  color: white;
 
   h1 a {
     text-transform: uppercase;
@@ -447,6 +448,7 @@ $main_color: #055699;
 
 .title-small {
   margin-bottom: 30px;
+  color: white;
 
   h3 {
     text-transform: uppercase;
@@ -459,84 +461,12 @@ $main_color: #055699;
 .page-content {
   margin-bottom: 40px;
   position: relative;
+  color: black;
 
   .news-main {
     margin-bottom: 10px;
   }
 
-  .news-right {
-    .news-search, .news-hot {
-      background: white;
-      padding: 30px 20px;
-      box-shadow: 0px 2px 1px #e1e1e1;
-      margin-bottom: 30px;
-    }
-
-    .news-search {
-      &-form {
-        position: relative;
-
-        input {
-          background: #f4f4f4;
-          border: 1px solid #e1e1e1;
-          padding-left: 30px;
-          height: 50px;
-          border-radius: 5px;
-
-          &:focus {
-            box-shadow: 0 0 0 2px rgba($main_color, .25)
-          }
-        }
-
-        i {
-          position: absolute;
-          top: 50%;
-          left: 5px;
-          transform: translateY(-50%);
-          font-size: 20px;
-          color: #858585;
-          transition: .5s;
-
-          &:hover {
-            color: $main_color;
-          }
-        }
-      }
-    }
-
-    .news-hot {
-      padding-bottom: 10px;
-
-      .box-news {
-        padding: 0;
-        background: none;
-        box-shadow: none;
-
-        &-img {
-          margin-right: -20px;
-        }
-
-        &-detail {
-          h5 {
-            margin-bottom: 10px;
-
-            a {
-              font-weight: 600;
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-line-clamp: 2;
-              -webkit-box-orient: vertical;
-              transition: .5s;
-
-              &:hover {
-                color: $main_color;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
   .page-tour {
     position: relative;
@@ -639,6 +569,7 @@ $main_color: #055699;
     h2 {
       text-transform: uppercase;
       margin-bottom: 20px;
+      color: white;
     }
   }
 
@@ -685,6 +616,7 @@ $main_color: #055699;
   padding: 30px;
   background: white;
   box-shadow: 0px 2px 1px #e1e1e1;
+  color: black;
 
   &-img {
     overflow: hidden;
@@ -743,8 +675,7 @@ $main_color: #055699;
 
 .box-tour {
   background: white;
-  padding: 20px;
-  padding-right: 0;
+  padding: 20px 0 10px 20px;
   box-shadow: 0px 2px 1px #e1e1e1;
   margin-bottom: 20px;
 
@@ -760,6 +691,7 @@ $main_color: #055699;
       margin-top: 10px;
       padding-top: 5px;
       border-top: 1px solid #e1e1e1;
+      color: #707070;
     }
   }
 
@@ -774,6 +706,7 @@ $main_color: #055699;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         transition: .5s;
+        color: black;
 
         &:hover {
           color: $main_color;
@@ -787,6 +720,7 @@ $main_color: #055699;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       color: #8D8D8D;
+      margin-bottom: 30px;
     }
   }
 
@@ -844,9 +778,16 @@ $main_color: #055699;
   }
 
   table.table-bordered.dataTable tbody tr {
-    background: white;
     font-size: 1rem;
     transition: 0;
+
+    &.odd {
+      background: white;
+    }
+
+    &.even {
+      background: #f4f4f4;
+    }
 
     td {
       font-weight: 500;
@@ -863,7 +804,7 @@ $main_color: #055699;
     }
 
     &:hover {
-      background: #f4f4f4;
+      background: #e1e1e1;
     }
   }
 
@@ -924,17 +865,18 @@ $main_color: #055699;
 
   .nav-tabs {
     border-bottom: 0;
-    margin-bottom: 20px;
 
     li {
       display: inline-block;
       margin-right: -2px;
+      margin-bottom: 20px;
 
       a {
         border-radius: 0;
         padding: 10px 20px;
         border: 0;
         background: white;
+        color: black;
 
         &:hover {
           color: white;
@@ -958,6 +900,7 @@ $main_color: #055699;
     display: grid;
     grid-template-columns: 60px calc(100% - 60px);
     grid-column-gap: 20px;
+    color: black;
 
     &-author {
       padding: 30px 0;
@@ -1008,7 +951,7 @@ $main_color: #055699;
     }
   }
 
-  #schedule, #result, #player, #save {
+  #schedule, #result, #player, #save, #branchTour {
     table.table-bordered tbody tr {
       background: white;
       font-size: 1rem;
@@ -1275,6 +1218,60 @@ $main_color: #055699;
       }
     }
   }
+
+  .tab-large {
+    ul {
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      li {
+        display: inline-block;
+        margin-right: 0px;
+        position: relative;
+        
+        a {
+          padding: 20px 20px;
+          background: white;
+          color: black;
+          transition: .5s;
+
+          &:hover {
+            background: $main_color;
+            color: white;
+          }
+        }
+
+        .active {
+          background: $main_color;
+          color: white;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -28px;
+            left: calc(45% + 10px);
+            width: 0;
+            height: 0;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $main_color;
+            transform: translateX(-50%);
+          }
+  
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -28px;
+            left: 45%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-top: 10px solid $main_color;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
 }
 
 .member-page {
@@ -1292,6 +1289,7 @@ $main_color: #055699;
     padding-bottom: 0;
     background: white;
     box-shadow: 0px 2px 1px #e1e1e1;
+    color: black;
 
     &.chart {
       padding-bottom: 20px;
@@ -1811,6 +1809,10 @@ div.jQBracket .bracket {
   grid-column-gap: 30px;
 }
 
+.table {
+  color: black!important;
+}
+
 .left {
 
   .box-left {
@@ -1819,7 +1821,25 @@ div.jQBracket .bracket {
     padding-bottom: 10px;
 
     ul {
-      padding: 0 15px;
+      padding: 15px;
+      max-height: 300px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
       
       li {
         padding-bottom: 10px;
@@ -1831,6 +1851,7 @@ div.jQBracket .bracket {
           -webkit-box-orient: vertical;
           transition: .5s;
           font-size: 13px;
+          color: black;
 
           i {
             margin-right: 10px;
@@ -1850,7 +1871,6 @@ div.jQBracket .bracket {
     background: $main_color;
     color: white;
     height: 40px;
-    margin-bottom: 20px;
 
     h5 {
       text-transform: uppercase;
@@ -1872,6 +1892,7 @@ div.jQBracket .bracket {
         border: 0;
         background: white;
         margin-right: 1px;
+        color: black;
 
         &:hover {
           color: white;
@@ -1885,6 +1906,12 @@ div.jQBracket .bracket {
       }
     }
   }
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label,
+div.dataTables_wrapper div.dataTables_info {
+  color: white;
 }
 
 

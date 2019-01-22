@@ -15,9 +15,11 @@ html {
 }
 
 body {
-  background-color: #f4f4f4;
+  background-image: url('../img/bg-body.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Montserrat';
-  color: black;
+  color: white;
   margin: 0;
   margin-right: 15px;
   overflow-x: hidden;
@@ -156,6 +158,8 @@ select:focus {
 article {
   padding-top: 70px;
 }
+
+
 
 
 // -----------------------
