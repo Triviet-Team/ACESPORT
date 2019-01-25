@@ -17,14 +17,6 @@ block article
       .container
         .title-page-text
           h2 10 Kids Unaware of Their Halloween Cosfume
-          
-        .tab-large 
-          ul
-            li
-              a(href='chi-tiet-giai-dau-doi-nam-1540.html') Đôi nam 1540
-            li
-              a(href='chi-tiet-giai-dau-doi-nam-1800.html') Đôi nam 1800
-            
 
         nav.navbar.navbar-light.d-block.d-md-none
           button.navbar-toggler.toggler-example(type='button', data-toggle='collapse', data-target='#tourTab', aria-controls='tourTab', aria-expanded='false', aria-label='Toggle navigation')
@@ -50,9 +42,6 @@ block article
               li.nav-item
                 a#save-tab.nav-link(data-toggle='tab', href='#save', role='tab', aria-controls='save', aria-selected='true') 
                   | Lịch sử giải đấu
-              li.nav-item
-                a#comment-tab.nav-link(data-toggle='tab', href='#comment', role='tab', aria-controls='comment', aria-selected='true') 
-                  | Bình luận
               
 
         ul.nav.nav-tabs.d-none.d-md-block(role='tablist')
@@ -74,9 +63,6 @@ block article
           li.nav-item
             a#save-tab.nav-link(data-toggle='tab', href='#save', role='tab', aria-controls='save', aria-selected='true') 
               | Lịch sử giải đấu
-          li.nav-item
-            a#comment-tab.nav-link(data-toggle='tab', href='#comment', role='tab', aria-controls='comment', aria-selected='true') 
-              | Bình luận
           
         .tab-content
           #general.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='general-tab')      
@@ -105,175 +91,337 @@ block article
                     span 
                       a(href='#') Giải đấu khô máu
 
+            .comment-first
+              .comment-first-img
+                img(src='../img/avatar.jpeg')
+              .comment-first-box
+                input.form-control(type="text", placeholder="Viết bình luận. . .")    
+            .comment-area
+
           #schedule.tab-pane.fade(role='tabpanel', aria-labelledby='schedule-tab')      
-            table.table.table-bordered.table-hover#schedule-table( style='width: 100%')
-              tbody
-                tr
-                  th(colspan='5') Vòng bảng
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
+            ul.nav.nav-tabs(role='tablist')
+              li.nav-item
+                a#schedule-1-tab.nav-link.active(data-toggle='tab', href='#schedule-1', role='tab', aria-controls='schedule-1', aria-selected='true') 
+                  | Đôi nam 1800
+              li.nav-item
+                a#schedule-2-tab.nav-link(data-toggle='tab', href='#schedule-2', role='tab', aria-controls='schedule-2', aria-selected='true') 
+                  | Đôi nam 1540
 
-                tr
-                  th(colspan='5') Vòng 1/16
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
+            .tab-content
+              #schedule-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='schedule-1-tab')
+                table.table.table-bordered.table-hover#schedule-table( style='width: 100%')
+                  tbody
+                    tr
+                      th(colspan='5') Vòng bảng 1800
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
 
-                tr
-                  th(colspan='5') Vòng Tứ kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
+                    tr
+                      th(colspan='5') Vòng 1/16
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
 
-                tr
-                  th(colspan='5') Vòng bán kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
+                    tr
+                      th(colspan='5') Vòng Tứ kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
 
-                tr
-                  th(colspan='5') Vòng chung kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
+                    tr
+                      th(colspan='5') Vòng bán kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
 
+                    tr
+                      th(colspan='5') Vòng chung kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+              
+              #schedule-2.tab-pane.fade(role='tabpanel', aria-labelledby='schedule-2-tab')  
+                table.table.table-bordered.table-hover#schedule-table( style='width: 100%')
+                  tbody
+                    tr
+                      th(colspan='5') Vòng bảng 1540
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+
+                    tr
+                      th(colspan='5') Vòng 1/16
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+
+                    tr
+                      th(colspan='5') Vòng Tứ kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+
+                    tr
+                      th(colspan='5') Vòng bán kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+
+                    tr
+                      th(colspan='5') Vòng chung kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+              
           #result.tab-pane.fade(role='tabpanel', aria-labelledby='result-tab')      
-            table.table.table-bordered.table-hover#result-table( style='width: 100%')
-              tbody
-                tr
-                  th(colspan='5') Vòng bảng
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
+            ul.nav.nav-tabs(role='tablist')
+              li.nav-item
+                a#result-1-tab.nav-link.active(data-toggle='tab', href='#result-1', role='tab', aria-controls='result-1', aria-selected='true') 
+                  | Đôi nam 1800
+              li.nav-item
+                a#result-2-tab.nav-link(data-toggle='tab', href='#result-2', role='tab', aria-controls='result-2', aria-selected='true') 
+                  | Đôi nam 1540
 
-                tr
-                  th(colspan='5') Vòng 1/16
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
+            .tab-content
+              #result-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='result-1-tab')
+                table.table.table-bordered.table-hover#result-table( style='width: 100%')
+                  tbody
+                    tr
+                      th(colspan='5') Vòng bảng 1800
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
 
-                tr
-                  th(colspan='5') Vòng Tứ kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
+                    tr
+                      th(colspan='5') Vòng 1/16
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
 
-                tr
-                  th(colspan='5') Vòng bán kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
+                    tr
+                      th(colspan='5') Vòng Tứ kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
 
-                tr
-                  th(colspan='5') Vòng chung kết
-                tr
-                  td(scope='col') 21/01/2019
-                  td(scope='col') Nguyễn Phong Thái
-                  td(scope='col') Hà Dĩ Thái
-                  td(scope='col') 5:4
+                    tr
+                      th(colspan='5') Vòng bán kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+
+                    tr
+                      th(colspan='5') Vòng chung kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+              
+              #result-2.tab-pane.fade(role='tabpanel', aria-labelledby='result-2-tab')
+                table.table.table-bordered.table-hover#result-table( style='width: 100%')
+                  tbody
+                    tr
+                      th(colspan='5') Vòng bảng 1540
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+
+                    tr
+                      th(colspan='5') Vòng 1/16
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+
+                    tr
+                      th(colspan='5') Vòng Tứ kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+
+                    tr
+                      th(colspan='5') Vòng bán kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
+
+                    tr
+                      th(colspan='5') Vòng chung kết
+                    tr
+                      td(scope='col') 21/01/2019
+                      td(scope='col') Nguyễn Phong Thái
+                      td(scope='col') Hà Dĩ Thái
+                      td(scope='col') 5:4
 
           #player.tab-pane.fade(role='tabpanel', aria-labelledby='player-tab')      
-            table.table.table-bordered.table-hover#player-table( style='width: 100%')
-              tr
-                th Đôi nam 1800
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
-              tr
-                th Đôi nam 1540
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
-              tr
-                td
-                  a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
-              
+            ul.nav.nav-tabs(role='tablist')
+              li.nav-item
+                a#player-1-tab.nav-link.active(data-toggle='tab', href='#player-1', role='tab', aria-controls='player-1', aria-selected='true') 
+                  | Đôi nam 1800
+              li.nav-item
+                a#player-2-tab.nav-link(data-toggle='tab', href='#player-2', role='tab', aria-controls='player-2', aria-selected='true') 
+                  | Đôi nam 1540
+
+            .tab-content
+              #player-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='player-1-tab')
+                table.table.table-bordered.table-hover#player-table( style='width: 100%')
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái 1800
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+            
+              #player-2.tab-pane.fade(role='tabpanel', aria-labelledby='player-2-tab')
+                table.table.table-bordered.table-hover#player-table( style='width: 100%')
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái 1540
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Nguyễn Phong Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Hà Dĩ Thái
+                  tr
+                    td
+                      a(href='chi-tiet-thanh-vien.html') Lệnh Hồ Thái
+                  
           #branchTour.tab-pane.fade(role='tabpanel', aria-labelledby='branchTour-tab')      
             table.table.table-bordered.table-hover#branch-table( style='width: 100%')
               tr
@@ -322,13 +470,5 @@ block article
                 tr 
                   td(scope='col') 
                     a(href='chi-tiet-giai-dau.html') ATP Úc Mở rộng 2018
-                  td(scope='col') Federer Roger
-                
-
-          #comment.tab-pane.fade(role='tabpanel', aria-labelledby='comment-tab')      
-            .comment-first
-              .comment-first-img
-                img(src='../img/avatar.jpeg')
-              .comment-first-box
-                input.form-control(type="text", placeholder="Viết bình luận. . .")    
-            .comment-area
+                  td(scope='col') Federer Roger      
+            

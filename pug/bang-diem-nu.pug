@@ -123,7 +123,16 @@ block article
                   a#scoreFemale-tab.nav-link( href='bang-diem-nu.html', aria-selected='false') 
                     | Nữ 
 
-              
+            table.range-score(border='0', cellspacing='5', cellpadding='5')
+              tbody
+                tr
+                  td
+                    h5 Tìm kiếm điểm theo phạm vi:
+                  td
+                    input#min-score(type='text', name='min-score', placeholder='Điểm từ')
+                  td
+                    input#max-score(type='text', name='max-score', placeholder='Đến điểm')
+
             .table-responsive
               table.table.table-bordered.table-hover.display.score-board-all#scoreBoardFemale(style='width: 100%')
                 thead

@@ -16,13 +16,6 @@ $('document').ready(function() {
     }
   });
 
-  $(".tab-large a").each( function() {
-    if (url == (this.href)) {
-      $(this).closest("li a").addClass("active");
-      $(this).closest("li li a").removeClass("active");
-    }
-  });
-
   $('.menu .nav').slideAndSwipe();
 
   let ww = document.body.clientWidth;

@@ -1166,50 +1166,25 @@ article {
 .page-text .sub-comment .box-sub-comment-date h5 {
   margin-bottom: 5px;
 }
-.page-text .tab-large ul {
-  margin-right: 0;
-  margin-bottom: 40px;
-}
-.page-text .tab-large ul li {
-  display: inline-block;
-  margin-right: 0px;
+
+.range-score {
+  color: white;
+  margin-bottom: 5px;
   position: relative;
+  float: right;
 }
-.page-text .tab-large ul li a {
-  padding: 20px 20px;
-  background: white;
-  color: black;
-  transition: 0.5s;
-}
-.page-text .tab-large ul li a:hover {
-  background: #055699;
+.range-score h5 {
   color: white;
 }
-.page-text .tab-large ul li .active {
-  background: #055699;
-  color: white;
-}
-.page-text .tab-large ul li .active::after {
-  content: "";
-  position: absolute;
-  bottom: -28px;
-  left: calc(45% + 10px);
-  width: 0;
-  height: 0;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #055699;
-  transform: translateX(-50%);
-}
-.page-text .tab-large ul li .active::before {
-  content: "";
-  position: absolute;
-  bottom: -28px;
-  left: 45%;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-top: 10px solid #055699;
-  transform: translateX(-50%);
+.range-score input {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  height: 30px;
+  background: #e1e1e1;
+  border: 0;
+  padding-left: 5px;
+  border-radius: 3px;
+  width: 85px;
 }
 
 .member-page .box-member-title {
@@ -1475,6 +1450,10 @@ article {
   font-weight: 600;
   text-transform: uppercase;
 }
+.member-page .box-member-tabs-content table tr td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .member-page .box-member-tabs-content .pagination .page-item .page-link {
   background: #e1e1e1;
   border: 1px solid #ccc;
@@ -1695,6 +1674,10 @@ div.jQBracket .bracket {
   text-transform: uppercase;
   text-align: center;
   line-height: 40px;
+}
+
+.score-board-main {
+  position: relative;
 }
 
 .score-board-tabs .nav-tabs {
@@ -2072,21 +2055,6 @@ div.dataTables_wrapper div.dataTables_info {
   .page-text .box-comment-detail-content,
 .page-text .box-post-detail-content {
     padding: 15px;
-  }
-  .page-text .tab-large {
-    text-align: center;
-  }
-  .page-text .tab-large ul {
-    margin-bottom: 0;
-  }
-  .page-text .tab-large ul li {
-    margin-bottom: 40px;
-  }
-  .page-text .tab-large ul li a {
-    padding: 10px 20px;
-  }
-  .page-text .tab-large ul li .active::before, .page-text .tab-large ul li .active::after {
-    bottom: -18px;
   }
 }
 @media (max-width: 410px) {

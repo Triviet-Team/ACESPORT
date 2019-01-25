@@ -153,12 +153,6 @@
           <div class="title-page-text">
             <h2>10 Kids Unaware of Their Halloween Cosfume</h2>
           </div>
-          <div class="tab-large"> 
-            <ul>
-              <li><a href="chi-tiet-giai-dau-doi-nam-1540.html">Đôi nam 1540</a></li>
-              <li><a href="chi-tiet-giai-dau-doi-nam-1800.html">Đôi nam 1800</a></li>
-            </ul>
-          </div>
           <nav class="navbar navbar-light d-block d-md-none">
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#tourTab" aria-controls="tourTab" aria-expanded="false" aria-label="Toggle navigation"><a class="navbar-brand">Điều lệ</a></button><i class="mdi mdi-chevron-down"></i>
             <div class="collapse navbar-collapse" id="tourTab">
@@ -175,8 +169,6 @@
                      Nhánh đấu</a></li>
                 <li class="nav-item"><a class="nav-link" id="save-tab" data-toggle="tab" href="#save" role="tab" aria-controls="save" aria-selected="true">
                      Lịch sử giải đấu</a></li>
-                <li class="nav-item"><a class="nav-link" id="comment-tab" data-toggle="tab" href="#comment" role="tab" aria-controls="comment" aria-selected="true">
-                     Bình luận</a></li>
               </ul>
             </div>
           </nav>
@@ -193,8 +185,6 @@
                  Nhánh đấu</a></li>
             <li class="nav-item"><a class="nav-link" id="save-tab" data-toggle="tab" href="#save" role="tab" aria-controls="save" aria-selected="true">
                  Lịch sử giải đấu</a></li>
-            <li class="nav-item"><a class="nav-link" id="comment-tab" data-toggle="tab" href="#comment" role="tab" aria-controls="comment" aria-selected="true">
-                 Bình luận</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">     
@@ -221,202 +211,387 @@
                   </div>
                 </div>
               </div>
+              <div class="comment-first">
+                <div class="comment-first-img"><img src="../img/avatar.jpeg"/></div>
+                <div class="comment-first-box">
+                  <input class="form-control" type="text" placeholder="Viết bình luận. . ."/>
+                </div>
+              </div>
+              <div class="comment-area"></div>
             </div>
             <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">     
-              <table class="table table-bordered table-hover" id="schedule-table" style="width: 100%">
-                <tbody>
-                  <tr>
-                    <th colspan="5">Vòng bảng</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng 1/16</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng Tứ kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng bán kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng chung kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                  </tr>
-                </tbody>
-              </table>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="schedule-1-tab" data-toggle="tab" href="#schedule-1" role="tab" aria-controls="schedule-1" aria-selected="true">
+                     Đôi nam 1800</a></li>
+                <li class="nav-item"><a class="nav-link" id="schedule-2-tab" data-toggle="tab" href="#schedule-2" role="tab" aria-controls="schedule-2" aria-selected="true">
+                     Đôi nam 1540</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="schedule-1" role="tabpanel" aria-labelledby="schedule-1-tab">
+                  <table class="table table-bordered table-hover" id="schedule-table" style="width: 100%">
+                    <tbody>
+                      <tr>
+                        <th colspan="5">Vòng bảng 1800</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng 1/16</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng Tứ kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng bán kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng chung kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="schedule-2" role="tabpanel" aria-labelledby="schedule-2-tab"> 
+                  <table class="table table-bordered table-hover" id="schedule-table" style="width: 100%">
+                    <tbody>
+                      <tr>
+                        <th colspan="5">Vòng bảng 1540</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng 1/16</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng Tứ kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng bán kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng chung kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="result" role="tabpanel" aria-labelledby="result-tab">     
-              <table class="table table-bordered table-hover" id="result-table" style="width: 100%">
-                <tbody>
-                  <tr>
-                    <th colspan="5">Vòng bảng</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng 1/16</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng Tứ kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng bán kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                  <tr>
-                    <th colspan="5">Vòng chung kết</th>
-                  </tr>
-                  <tr>
-                    <td scope="col">21/01/2019</td>
-                    <td scope="col">Nguyễn Phong Thái</td>
-                    <td scope="col">Hà Dĩ Thái</td>
-                    <td scope="col">5:4</td>
-                  </tr>
-                </tbody>
-              </table>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="result-1-tab" data-toggle="tab" href="#result-1" role="tab" aria-controls="result-1" aria-selected="true">
+                     Đôi nam 1800</a></li>
+                <li class="nav-item"><a class="nav-link" id="result-2-tab" data-toggle="tab" href="#result-2" role="tab" aria-controls="result-2" aria-selected="true">
+                     Đôi nam 1540</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="result-1" role="tabpanel" aria-labelledby="result-1-tab">
+                  <table class="table table-bordered table-hover" id="result-table" style="width: 100%">
+                    <tbody>
+                      <tr>
+                        <th colspan="5">Vòng bảng 1800</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng 1/16</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng Tứ kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng bán kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng chung kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="result-2" role="tabpanel" aria-labelledby="result-2-tab">
+                  <table class="table table-bordered table-hover" id="result-table" style="width: 100%">
+                    <tbody>
+                      <tr>
+                        <th colspan="5">Vòng bảng 1540</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng 1/16</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng Tứ kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng bán kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                      <tr>
+                        <th colspan="5">Vòng chung kết</th>
+                      </tr>
+                      <tr>
+                        <td scope="col">21/01/2019</td>
+                        <td scope="col">Nguyễn Phong Thái</td>
+                        <td scope="col">Hà Dĩ Thái</td>
+                        <td scope="col">5:4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="player" role="tabpanel" aria-labelledby="player-tab">     
-              <table class="table table-bordered table-hover" id="player-table" style="width: 100%">
-                <tr>
-                  <th>Đôi nam 1800</th>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
-                </tr>
-                <tr>
-                  <th>Đôi nam 1540</th>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
-                </tr>
-                <tr>
-                  <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
-                </tr>
-              </table>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="player-1-tab" data-toggle="tab" href="#player-1" role="tab" aria-controls="player-1" aria-selected="true">
+                     Đôi nam 1800</a></li>
+                <li class="nav-item"><a class="nav-link" id="player-2-tab" data-toggle="tab" href="#player-2" role="tab" aria-controls="player-2" aria-selected="true">
+                     Đôi nam 1540</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="player-1" role="tabpanel" aria-labelledby="player-1-tab">
+                  <table class="table table-bordered table-hover" id="player-table" style="width: 100%">
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái 1800</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="player-2" role="tabpanel" aria-labelledby="player-2-tab">
+                  <table class="table table-bordered table-hover" id="player-table" style="width: 100%">
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái 1540</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Nguyễn Phong Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Hà Dĩ Thái</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="chi-tiet-thanh-vien.html">Lệnh Hồ Thái</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="branchTour" role="tabpanel" aria-labelledby="branchTour-tab">     
               <table class="table table-bordered table-hover" id="branch-table" style="width: 100%">
@@ -469,19 +644,10 @@
                   </tr>
                   <tr> 
                     <td scope="col"> <a href="chi-tiet-giai-dau.html">ATP Úc Mở rộng 2018</a></td>
-                    <td scope="col">Federer Roger</td>
+                    <td scope="col">Federer Roger      </td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="tab-pane fade" id="comment" role="tabpanel" aria-labelledby="comment-tab">     
-              <div class="comment-first">
-                <div class="comment-first-img"><img src="../img/avatar.jpeg"/></div>
-                <div class="comment-first-box">
-                  <input class="form-control" type="text" placeholder="Viết bình luận. . ."/>
-                </div>
-              </div>
-              <div class="comment-area"></div>
             </div>
           </div>
         </div>
